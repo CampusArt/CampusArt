@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {Helmet, HelmetProvider} from "react-helmet-async";
-import {AnimatePresence, motion} from "framer-motion"
+import {
+  useViewportScroll,
+  AnimatePresence, 
+  useTransform,
+  motion
+} from "framer-motion"
 
 // Components
 import Loader from "../components/Loader";
@@ -8,7 +13,6 @@ import AnimatedCharacters from "../components/AnimatedText";
 
 
 // Assets
-import topScreenPic from "../assets/images/TopScreenPic.jpg"
 
 export default function Homepage() {
 
@@ -58,6 +62,11 @@ export default function Homepage() {
     {type: "heading1", text: "CAMPUS ART"}
   ];
 
+  // Parallax
+  const { scrollY } = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 1080], [0, 300]);
+  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
+
   return (
     <AnimatePresence>
       {loading ? (
@@ -85,6 +94,9 @@ export default function Homepage() {
                   // animate="visible"
                   animate={loading ? "hidden" : "visible"}
                   variants={wrapper}
+                  style={{
+                    y: y2
+                  }}
                 >
                   <div style={{paddingRight: "10px"}}>
                     {
@@ -102,25 +114,30 @@ export default function Homepage() {
                 >
                   <p>The Center for Campus Art takes charge of the creative direction of Benilde through the design, curation, administration, and management of spaces and activities of the College that interface with the public. It provides creative vision and guidance to our Schools and other members of the Benildean Community in the design, selection and implementation of specific projects, productions, outreach programs, performances, exhibit shows, symposia, partnerships, and tours. The Center enhances the public areas of the three campuses of Benilde through thoughtful curation of these spaces by selecting, managing and approving appropriate shows and exhibits, art and design artefacts, exhibit and installation systems, lighting, video, sound and other media systems, graphics and curatorial text, among others. </p>
                 </motion.div>
-                <div
+                <motion.div
                   style={{
                     display: "flex",
                     alignItems: 'center',
                     justifyContent: 'center',
                     width: '100%',
-                    position: 'absolute'
+                    position: 'absolute',
                   }}
                 >
                   
                   <motion.div
-                    id="topscreenPic" 
+                    id="topscreenPic"
                     initial={{opacity: 0, y: -100}}
                     animate={{opacity: 1, y: 0, transition: {delay: 2}}}
+                    style={{
+                      y: y1
+                    }}
                   >
                   </motion.div>
-                </div>
+                </motion.div>
               </section>
-              
+              <section style={{height: "100vh"}}>
+                
+              </section>
             </div>
           </div>
         </motion.main>
