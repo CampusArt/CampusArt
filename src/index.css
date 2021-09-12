@@ -76,7 +76,7 @@ body.loading {
   background: rgba( 17, 17, 17, 0.1 );
   backdrop-filter: blur( 3.5px );
   -webkit-backdrop-filter: blur( 3.5px );
-  z-index: 10000000000000000000000000000;
+  z-index: 1000;
 }
 #main-header.loaded {
   animation-name: dropdown;
