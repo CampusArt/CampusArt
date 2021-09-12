@@ -1,13 +1,191 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*CSS Reset*/
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box }
+
+/* =============================
+  Custom classes and variables 
+  ============================ */
+:root {
+  --primary: #111;
+}
+body.loading {
+  overflow-y: hidden;
+}
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.grid {
+  height: 100px;
+  min-height: 100vh;
+  background-color: transparent;
+  background-size: 14.23% 100%;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to right, #222 0.1px, transparent 1px);
+  background-position: 50%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ======= COMPONENTS ====== */
+
+/* Loading
+-----------------------------*/
+#loader {
+  height: 100vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  overflow: hidden;
+}
+#loader img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+#loader h1 {
+  padding-top: 8px;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1rem, 2vw, 30rem);
+}
+.word-wrapper {
+  white-space: nowrap;
+}
+
+/* Header
+-----------------------------*/
+#main-header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background: var(--primary);
+  border-bottom: solid 1px #333;
+  top: -100%;
+}
+#main-header.loaded {
+  animation-name: dropdown;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes dropdown {
+  from {top: -65px;}
+  to { top: 0; }
+}
+#main-header .menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+#main-header .container { 
+  display: flex; 
+  align-items: center;
+  padding: 12px 14px;
+  justify-content: space-between
+}
+#main-header #hamburger {
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#main-header #hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+#main-header .container .home-link a {
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 5px;
+  color: #fff;
+  width: 100%;
+  max-width: 150px;
+  text-decoration: none;
+  user-select: none;
+}
+#main-header .container .home-link a span {
+  padding-top: 5px;
+}
+
+/* ========= PAGES ========= */
+
+/* Homepage
+-----------------------------*/
+#homepage {
+  background-color: var(--primary);
+  min-height: 100vh;
+}
+#homepage #landing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  height: 100%;
+  position: relative;
+}
+#homepage #landing h1 {
+  font-size: clamp(3rem, 50vw, 5rem);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 900;
+  line-height: 0.9em;
+}
+#homepage #landing p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+}
+#homepage #landing::after {
+  display: block;
+  content: "SCROLL DOWN";
+  font-family: 'Nunito Sans', sans-serif;
+  position: absolute;
+  bottom: 120px;
+  left: -100px;
+  height: 1px;
+  background-color: #fff;
+  width: 200px;
+  text-align: right;
+  transform: rotate(-90deg);
+}
+#homepage #landing #main-title {
+  display: flex;
+}
+#homepage #landing #about-landing {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  max-width: 490px;
+  bottom: 10%;
+  z-index: 1
+}
+#homepage #landing #topscreenPic {
+  background-image: url(./assets//images/TopScreenPic.jpg);
+  mix-blend-mode: hard-light;
+  z-index: 0;
+  width: 100%;
+  max-width: 512px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 512px;
+  left: 0;
+  background-position: center;
+}
+
+/* ======= MEDIA QUERIES ====== */
+@media only screen and (max-width: 1366px) {
+  .grid {
+    background-size: 25% 100%;
+  }
 }

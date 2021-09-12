@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect} from "react"; 
+import { 
+  BrowserRouter as Router, 
+  Switch, 
+  Route,
+  useLocation
+} from "react-router-dom";
 
+// Components
+import Header from "./components/Header";
+
+// Pages
+import Homepage from "./pages/Homepage.js";
+import { AnimatePresence } from "framer-motion";
+
+//eslint-disable-next-line
 function App() {
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    },4000)
+  }, [loading])
+
+  useEffect(() => {
+    loading
+      ?  document.querySelector("body").classList.add("loading")
+      : document.querySelector("body").classList.remove('loading');
+  }, [loading])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AnimatePresence>
+      {!loading && (
+        <Header setIsLoading={setLoading}/>
+      )}
+      <Switch location={location} key={location.pathname}>
+        <Route path="/" component={Homepage} />
+      </Switch>
+    </AnimatePresence>
+  )
 }
 
-export default App;
+//eslint-disable-next-line
+export default () => (
+  <Router>
+    <App/>
+  </Router>
+)
