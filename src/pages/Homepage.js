@@ -26,11 +26,11 @@ export default function Homepage() {
   }, [loading])
 
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   },4000)
-  // }, [loading])
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    },4000)
+  }, [loading])
 
 
   const wrapper = {
