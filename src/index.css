@@ -1,12 +1,15 @@
 /*CSS Reset*/
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * { margin: 0; padding: 0; box-sizing: border-box }
 
 /* =============================
   Custom classes and variables 
   ============================ */
-  
+
+h1,h2,h3,h4,h5,h6, p {
+  font-family: 'Poppins', sans-serif;
+}
 
 :root {
   --primary: #111;
@@ -33,6 +36,10 @@ body.loading {
   background-position: 50%;
 }
 
+.flex {
+  display: flex;
+}
+
 /* ======= COMPONENTS ====== */
 
 /* Loading
@@ -54,15 +61,15 @@ body.loading {
   user-select: none;
   width: 100%;
 }
-#loader h1 {
+#loader p{
   padding-top: 8px;
   text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
   font-size: clamp(1rem, 2vw, 30rem);
-}
-.word-wrapper {
-  white-space: nowrap;
+  letter-spacing: 2vw;
+  color: #fff;
+  text-align: center;
 }
 
 /* Header
@@ -101,7 +108,7 @@ body.loading {
 }
 #main-header #hamburger {
   height: 20px;
-  width: 30px;
+  width: 25px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -109,11 +116,31 @@ body.loading {
 }
 #main-header #hamburger span {
   width: 100%;
+  transition: 0.3s;
   height: 2px;
   background-color: #fff;
+  transform-origin: left;
+}
+#main-header #hamburger span:nth-child(2) {
+  width: 75%;
+}
+#main-header #hamburger span:nth-child(3) {
+  width: 25%;
+}
+#main-header #hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+#main-header #hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+#main-header #hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: left;
 }
 #main-header .container .home-link a {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,18 +174,18 @@ body.loading {
 }
 #homepage #landing h1 {
   font-size: clamp(3rem, 6vw, 6rem);
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   line-height: 0.9em;
 }
 #homepage #landing p {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
 #homepage #landing::after {
   display: block;
   content: "SCROLL DOWN";
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: absolute;
   bottom: 120px;
   left: -100px;
@@ -183,15 +210,53 @@ body.loading {
 #homepage #landing #topscreenPic {
   background-image: url(./assets//images/TopScreenPic.jpg);
   mix-blend-mode: hard-light;
+  -webkit-backface-visibility: visible;
   z-index: 0;
   width: 100%;
   max-width: 512px;
   background-size: contain;
   background-repeat: no-repeat;
-  min-height: 512px;
   left: 0;
   background-position: center;
-  margin: 12px;
+  margin: 50px;
+}
+#featured-exhibits {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#featured-exhibits .wrapper {
+  width: 100%;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+#featured-exhibits .wrapper .flex::before {
+  display: block;
+  content: "";
+  width: 2px;
+  background: #fff;
+  margin-right: 10px;
+}
+#featured-exhibits .wrapper h1 {
+  font-size: clamp(2em, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1em;
+}
+#featured-exhibits .wrapper p {
+  width: 100%;
+  max-width: 170px;
+  margin-left: 24px;
+  font-size: 14px;
+}
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 30vh;
+  background: #fff;
+  margin: 24px 0px;
 }
 
 /* ======= MEDIA QUERIES ====== */ 

@@ -13,6 +13,7 @@ import AnimatedCharacters from "../components/AnimatedText";
 
 
 // Assets
+import topScreenPic from "../assets/images/TopScreenPic.jpg"
 
 export default function Homepage() {
 
@@ -25,11 +26,11 @@ export default function Homepage() {
   }, [loading])
 
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    },4000)
-  }, [loading])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   },4000)
+  // }, [loading])
 
 
   const wrapper = {
@@ -124,7 +125,7 @@ export default function Homepage() {
                   }}
                 >
                   
-                  <motion.div
+                  {/* <motion.div
                     id="topscreenPic"
                     initial={{opacity: 0, y: -100}}
                     animate={{opacity: 1, y: 0, transition: {delay: 2}}}
@@ -134,11 +135,29 @@ export default function Homepage() {
                       isolation: "isolate"
                     }}
                   >
-                  </motion.div>
+                  </motion.div> */}
+                  <motion.img
+                    id="topscreenPic"
+                    initial={{opacity: 0, y: -100}}
+                    animate={{opacity: 1, y: 0, transition: {delay: 2}}}
+                    src={topScreenPic}
+                    alt=""
+                    style={{
+                      y: y1,
+                      isolation: "isolate"
+                    }}
+                  />
                 </motion.div>
               </section>
-              <section style={{height: "100vh"}}>
-                
+              <section id="featured-exhibits">
+                <div className="wrapper">
+                  <div className="flex">
+                    <h1>EXHIBITS<br/>2021</h1>
+                    <p>Lorem ipsum dolor iset amet</p>
+                  </div>
+                  <div id="banner">
+                  </div>
+                </div>
               </section>
             </div>
           </div>
