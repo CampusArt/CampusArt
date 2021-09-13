@@ -1,7 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion";
 import Logo from "../assets/images/CCA-Logo.svg"
-import AnimatedCharacters from "../components/AnimatedText";
+// import AnimatedCharacters from "../components/AnimatedText";
 
 // Variants
 const container = {
@@ -38,9 +38,9 @@ const wrapper = {
   }
 };
 
-const title = [
-  { type: "heading1", text: "CENTER FOR CAMPUS ART" },
-];
+// const title = [
+//   { type: "heading1", text: "CENTER FOR CAMPUS ART" },
+// ];
 
 const Loader = ({ setLoading }) => {
 

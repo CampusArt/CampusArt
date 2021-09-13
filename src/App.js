@@ -8,6 +8,7 @@ import {
 
 // Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Pages
 import Homepage from "./pages/Homepage.js";
@@ -38,11 +39,14 @@ function App() {
       <Switch location={location} key={location.pathname}>
         <Route path="/" component={Homepage} />
       </Switch>
+      {!loading && (
+        <Footer key="1" setIsLoading={setLoading}/>
+      )}
     </AnimatePresence>
   )
 }
 
-//eslint-disable-next-line
+// eslint-disable-next-line
 export default () => (
   <Router>
     <App/>

@@ -1,16 +1,19 @@
 import React, {useState, useEffect} from "react";
 import {Helmet, HelmetProvider} from "react-helmet-async";
+import { Link } from "react-router-dom"
 import {
   useViewportScroll,
   AnimatePresence, 
   useTransform,
   motion
 } from "framer-motion"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 // Components
 import Loader from "../components/Loader";
 import AnimatedCharacters from "../components/AnimatedText";
-
+import Banners from "../data";
 
 // Assets
 import topScreenPic from "../assets/images/TopScreenPic.jpg"
@@ -30,7 +33,7 @@ export default function Homepage() {
     setTimeout(() => {
       setLoading(false)
     },4000)
-  }, [loading])
+  }, [loading]);
 
 
   const wrapper = {
@@ -68,6 +71,62 @@ export default function Homepage() {
   const y1 = useTransform(scrollY, [0, 1080], [0, 300]);
   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
 
+  // GSAP
+  useEffect(() => {
+    window.addEventListener("resize", () => ScrollTrigger.refresh());
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({
+      autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
+    });
+
+    if(!loading) {
+      ScrollTrigger.matchMedia({
+
+        // Desktop
+        "(min-width: 812px)": () => {
+          gsap.to("#banner-wrapper .banner-details", {
+            scrollTrigger: {
+              scroller: document.body,
+              trigger: "#featured-exhibits",
+              end: "center center",
+              scrub: true,
+              invalidateOnRefresh: true,
+              // markers: true,
+            },
+            y: "-300px",
+            ease: "none"
+          });
+          
+          gsap.to("#banner-wrapper .banner h1", {
+            scrollTrigger: {
+              scroller: document.body,
+              trigger: "#featured-exhibits",
+              end: "bottom bottom",
+              scrub: true,
+              invalidateOnRefresh: true,
+              // markers: true
+            },
+            y: "350px",
+            ease: "none"
+          });
+
+          gsap.to("#banner-wrapper .banner .banner-bg", {
+            backgroundPosition: "50% 100%",
+            ease: "easeIn",
+            scrollTrigger: {
+              trigger: "#featured-exhibits",
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true
+            }
+          })
+        },
+        "all": () => {
+          // Kill it
+        }
+      })
+    }
+  }, [loading])
   return (
     <AnimatePresence>
       {loading ? (
@@ -113,7 +172,7 @@ export default function Homepage() {
                   initial="hidden"
                   animate="visible"
                 >
-                  <p>The Center for Campus Art takes charge of the creative direction of Benilde through the design, curation, administration, and management of spaces and activities of the College that interface with the public. It provides creative vision and guidance to our Schools and other members of the Benildean Community in the design, selection and implementation of specific projects, productions, outreach programs, performances, exhibit shows, symposia, partnerships, and tours. The Center enhances the public areas of the three campuses of Benilde through thoughtful curation of these spaces by selecting, managing and approving appropriate shows and exhibits, art and design artefacts, exhibit and installation systems, lighting, video, sound and other media systems, graphics and curatorial text, among others. </p>
+                  <p>The Center for Campus Art / CCA explores the intersections of art, design, society, communities, and the environment through exhibitions. The CCA operates under the Office of the President of the De La Salle-College of Saint Benilde, Manila, Philippines and is headed by Ar Gerry Torres as Director and Curator.</p>
                 </motion.div>
                 <motion.div
                   style={{
@@ -151,14 +210,48 @@ export default function Homepage() {
               </section>
               <section id="featured-exhibits">
                 <div className="wrapper">
-                  <div className="flex">
+                  <div className="title flex">
                     <h1>EXHIBITS<br/>2021</h1>
-                    <p>Lorem ipsum dolor iset amet</p>
+                    <p>Upcoming exhibits this coming September</p>
                   </div>
-                  <div id="banner">
+                  <div id="banner-wrapper">
+                    <div style={{position: 'relative'}}>
+                      {
+                        Banners.map((banner) => {
+                          return (
+                            <div
+                              key={banner.id}
+                              className="banner"
+                            >
+                              <div className="banner-content">
+                                <h1
+                                  style={{
+                                    y: y1,
+                                  }}
+                                  dangerouslySetInnerHTML={{__html: banner.title}}
+                                />
+                                <Link to={`/exhibit/${banner.id}`}>
+                                  <div 
+                                    className="banner-bg"
+                                    style={{
+                                      backgroundImage: `url(${banner.banner})`
+                                    }}
+                                  ></div>
+                                </Link>
+                                <div className="banner-details">
+                                  <p className="banner-date">{banner.date}</p>
+                                  <p className="banner-description">{banner.description}</p>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
                   </div>
                 </div>
               </section>
+              {/* <section></section> */}
             </div>
           </div>
         </motion.main>

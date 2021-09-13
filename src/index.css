@@ -32,7 +32,7 @@ body.loading {
   background-color: transparent;
   background-size: 14.23% 100%;
   background-repeat: repeat-x;
-  background-image: linear-gradient(to right, #222 0.1px, transparent 1px);
+  background-image: linear-gradient(to right, #222 1px, transparent 1px);
   background-position: 50%;
 }
 
@@ -156,6 +156,35 @@ body.loading {
   padding-top: 5px;
 }
 
+/* Footer
+-----------------------------*/
+
+footer {
+  display: flex;
+  width: 100%;
+  border-top: solid 1px #333;
+  background: rgba( 17, 17, 17, 1);
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  padding: 24px 0px;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+footer ul a,
+footer ul li {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 1.4em;
+}
+footer ul li { margin: 0px 5px; }
+
 /* ========= PAGES ========= */
 
 /* Homepage
@@ -164,13 +193,18 @@ body.loading {
   background-color: var(--primary);
   min-height: 100vh;
 }
+#homepage section {
+  max-height: 100vh;
+  min-height: 768px;
+  height: 100%;
+}
 #homepage #landing {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: #fff;
-  height: 100vh;
   position: relative;
+  height: 100vh;
 }
 #homepage #landing h1 {
   font-size: clamp(3rem, 6vw, 6rem);
@@ -195,6 +229,18 @@ body.loading {
   text-align: right;
   transform: rotate(-90deg);
 }
+#homepage #landing::before {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  bottom: 15px;
+  left: -5px;
+}
 #homepage #landing #main-title {
   display: flex;
 }
@@ -210,6 +256,8 @@ body.loading {
 #homepage #landing #topscreenPic {
   background-image: url(./assets//images/TopScreenPic.jpg);
   mix-blend-mode: hard-light;
+  backface-visibility: visible;
+  -moz-backface-visibility: visible;
   -webkit-backface-visibility: visible;
   z-index: 0;
   width: 100%;
@@ -221,9 +269,12 @@ body.loading {
   margin: 50px;
 }
 #featured-exhibits {
-  height: 100vh;
+  height: 100%;
+  max-height: unset !important;
+  min-height: 768px;
   display: flex;
   align-items: center;
+  margin-top: 100px;
   justify-content: center;
 }
 #featured-exhibits .wrapper {
@@ -231,37 +282,132 @@ body.loading {
   color: #fff;
   font-family: "Poppins", sans-serif;
 }
-#featured-exhibits .wrapper .flex::before {
+#featured-exhibits .wrapper .flex {
+  position: relative;
+}
+#featured-exhibits .wrapper .title::before {
   display: block;
   content: "";
   width: 2px;
   background: #fff;
   margin-right: 10px;
 }
+#featured-exhibits .wrapper .title::after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  bottom: -5px;
+  left: -4px;
+}
 #featured-exhibits .wrapper h1 {
   font-size: clamp(2em, 6vw, 4rem);
   font-weight: 700;
   line-height: 1em;
 }
-#featured-exhibits .wrapper p {
+#featured-exhibits .title p {
   width: 100%;
   max-width: 170px;
   margin-left: 24px;
   font-size: 14px;
 }
-#banner {
+#featured-exhibits .wrapper #banner-wrapper {
+  display: flex;
+  margin: 50px 0px;
+  position: relative;
+  flex-direction: column;
+}
+#featured-exhibits .wrapper #banner-wrapper .banner{
+  text-decoration: none;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  /* background: #fff; todo */
+  position: relative;
+  margin: 100px 0px;
+  color: #fff;
+}
+
+#featured-exhibits .wrapper #banner-wrapper .banner a{
+  display: flex;
+  height: 500px;
+  width: 100%;
+  max-width: 788px;
+}
+#featured-exhibits .wrapper #banner-wrapper .banner .banner-bg {
+  height: 100%;
+  width: 100%;
+  max-width: 788px;
+  position: absolute !important;
+  mix-blend-mode: exclusion;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#featured-exhibits #banner-wrapper .banner .banner-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 100%;
+} 
+#featured-exhibits #banner-wrapper .banner h1 {
+  top: 0;
+  right: 0;
+  position: absolute;
   width: 100%;
-  min-height: 30vh;
-  background: #fff;
-  margin: 24px 0px;
+  max-width: 483px;
 }
-
+#featured-exhibits #banner-wrapper .banner:nth-child(even) h1 {
+  right: unset;
+  left: 0;
+}
+#featured-exhibits #banner-wrapper .banner:nth-child(even) .banner-details {
+  left: unset;
+  right: 0;
+}
+#featured-exhibits #banner-wrapper .banner .banner-details {
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  max-width: 433px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#featured-exhibits #banner-wrapper .banner .banner-details .banner-date {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+#featured-exhibits #banner-wrapper .banner .banner-details .banner-date::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #ffff;
+  flex: 1;
+  margin-right: 10px;
+}
+#featured-exhibits #banner-wrapper .banner {
+  flex-direction: column-reverse
+}
 /* ======= MEDIA QUERIES ====== */ 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 812px) {
   .grid {
     background-size: 25% 100%;
+  }
+  #featured-exhibits #banner-wrapper .banner h1,
+  #featured-exhibits #banner-wrapper .banner .banner-details,
+  #featured-exhibits #banner-wrapper .banner .banner-content,
+  #featured-exhibits .wrapper #banner-wrapper .banner .banner-bg {
+    position: relative !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: unset;
+    padding: 10px 0px;
   }
 }
