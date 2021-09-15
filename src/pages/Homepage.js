@@ -223,7 +223,7 @@ export default function Homepage({ setLoading }) {
                               }}
                               dangerouslySetInnerHTML={{__html: banner.title}}
                             />
-                            <Link to={`/exhibit/${banner.id}`}>
+                            <Link to={`/exhibit/${banner.url}`}>
                               <div 
                                 className="banner-bg"
                                 style={{
