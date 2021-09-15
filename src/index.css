@@ -40,6 +40,10 @@ body.loading {
   display: flex;
 }
 
+.hide-scroll {
+  overflow: hidden;
+}
+
 /* ======= COMPONENTS ====== */
 
 /* Loading
@@ -83,7 +87,7 @@ body.loading {
   background: rgba( 17, 17, 17, 0.1 );
   backdrop-filter: blur( 3.5px );
   -webkit-backdrop-filter: blur( 3.5px );
-  z-index: 1000;
+  z-index: 100000;
 }
 #main-header.loaded {
   animation-name: dropdown;
@@ -121,23 +125,49 @@ body.loading {
   background-color: #fff;
   transform-origin: left;
 }
-#main-header #hamburger span:nth-child(2) {
-  width: 75%;
+#main-header #hamburger span:nth-child(2) { width: 75%; transform-origin: right; }
+#main-header #hamburger span:nth-child(3) { width: 25%; }
+
+/* Nav-wrapper */
+#nav-wrapper {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  background-color: #000;
+  z-index: 1000;
+  align-items: center;
 }
-#main-header #hamburger span:nth-child(3) {
-  width: 25%;
+#nav-wrapper a {
+  filter: grayscale(100);
+  transition: 0.3s;
+  background-position: center;
 }
-#main-header #hamburger.active span:nth-child(1) {
-  transform: rotate(45deg);
+#nav-wrapper a:hover {
+  filter: grayscale(0);
+  transition: 0.3s;
 }
+#motion-component {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+/* Hamburger is active */
+#main-header #hamburger.active span:nth-child(1) { transform: rotate(45deg); }
 #main-header #hamburger.active span:nth-child(2) {
-  opacity: 0;
   transition: 0.5s;
-  transform: translateX(-100%);
+  width: 0%;
+  transform-origin: right;
 }
 #main-header #hamburger.active span:nth-child(3) {
   transform: rotate(-45deg);
   transform-origin: left;
+  width: 100%;
 }
 #main-header .container .home-link a {
   font-family: 'Poppins', sans-serif;
@@ -152,9 +182,7 @@ body.loading {
   text-decoration: none;
   user-select: none;
 }
-#main-header .container .home-link a span {
-  padding-top: 5px;
-}
+#main-header .container .home-link a span { padding-top: 5px; }
 
 /* Footer
 -----------------------------*/
@@ -168,7 +196,18 @@ footer {
   -webkit-backdrop-filter: blur( 3.5px );
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
-  padding: 24px 0px;
+}
+footer .container { padding: 7px;}
+footer .container > p {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.6rem, 1vw, 5rem);
+  padding: 12px 0px;
+}
+footer .container > p span {
+  letter-spacing: 1vw;
 }
 footer ul {
   display: flex;
@@ -176,12 +215,15 @@ footer ul {
   justify-content: space-between;
 }
 footer ul a,
-footer ul li {
+footer ul li button {
   color: #fff;
   font-size: 14px;
   font-weight: 300;
   text-decoration: none;
   line-height: 1.4em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 footer ul li { margin: 0px 5px; }
 
@@ -395,6 +437,105 @@ footer ul li { margin: 0px 5px; }
 #featured-exhibits #banner-wrapper .banner {
   flex-direction: column-reverse
 }
+
+/* 404 NOT FOUND
+-----------------------------*/
+#not-found { background-color: #111; height: 100vh; }
+#not-found .container { 
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+}
+.glitch {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 900;
+	color: white;
+  font-size: clamp(1rem, 25vw, 12rem);
+	animation: glitch 2s steps(100) infinite;
+  line-height: 1em;
+}
+#not-found .container div {
+  text-align: center;
+  color: #fff;
+}
+#not-found .container div p {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 32px 0px;
+}
+#not-found .container div a {
+  color: #fff;
+  height: 50px;
+  padding: 0px 24px;
+  text-decoration: none;
+  background: #333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+/* Exhibits
+-----------------------------*/
+
+/* Taft */
+#taft #landing {
+  height: 100vh;
+
+}
+
+
+/* GLITCH EFFECT */
+@keyframes glitch {
+  0% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+  4% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+  5% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  10% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  11% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+  15% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+  16% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+  20% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+  21% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+  30% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+  31% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+  40% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+  41% {text-shadow: 50px 0 0 blue, -50px 0 0 lime;}
+  42% {text-shadow: 0 0 0 blue, 0 0 0 lime;}
+  43% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+  46% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+  47% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+  50% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+  51% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+  55% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+  56% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  60% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  61% {text-shadow: 30px 0 0 red, -30px 0 0 lime;}
+  62% {text-shadow: 0 0 0 red, 0 0 0 lime;}
+  63% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;}
+  66% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;}
+  67% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  70% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  71% {text-shadow: 70px 0 0 red, -70px 0 0 blue;}
+  72% {text-shadow: 0 0 0 red, 0 0 0 blue;}
+  73% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+  76% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
+  77% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  80% {text-shadow: -1px 0 0 red, 1px 0 0 blue;}
+  81% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+  85% {text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;}
+  86% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+  90% {text-shadow: -1px 0 0 red, 1px 0 0 lime;}
+  91% {text-shadow: 60px 0 0 lime, -60px 0 0 blue;}
+  92% {text-shadow: 0 0 0 lime, 0 0 0 blue;}
+  92% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+  95% {text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;}
+  96% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+  99% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+  100% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
+}
+
 /* ======= MEDIA QUERIES ====== */ 
 @media only screen and (max-width: 812px) {
   .grid {

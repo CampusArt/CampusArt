@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {motion} from "framer-motion";
 import Logo from "../assets/images/CCA-Logo.svg"
 // import AnimatedCharacters from "../components/AnimatedText";
@@ -38,13 +38,14 @@ const wrapper = {
   }
 };
 
-// const title = [
-//   { type: "heading1", text: "CENTER FOR CAMPUS ART" },
-// ];
-
 const Loader = ({ setLoading }) => {
 
-  const loading = true;
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+    return () => clearTimeout(timer)
+  })
 
   return (
     <motion.div
@@ -56,8 +57,7 @@ const Loader = ({ setLoading }) => {
     >
       <motion.div
         initial="hidden"
-        // animate="visible"
-        animate={loading ? "visible" : "hidden"}
+        animate="visible"
         variants={wrapper}
         style={{
           textAlign: "center",

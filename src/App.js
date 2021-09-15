@@ -5,25 +5,29 @@ import {
   Route,
   useLocation
 } from "react-router-dom";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 
 // Pages
 import Homepage from "./pages/Homepage.js";
-import { AnimatePresence } from "framer-motion";
+import NotFound from "./pages/NotFound.js";
+import ComingSoon from "./pages/ComingSoon.js";
+import Taft from "./pages/exhibits/Taft.js";
 
 //eslint-disable-next-line
 function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    },4000)
-  }, [loading])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   },4000)
+  // }, [loading])
 
   useEffect(() => {
     loading
@@ -32,17 +36,26 @@ function App() {
   }, [loading])
 
   return (
-    <AnimatePresence>
-      {!loading && (
-        <Header setIsLoading={setLoading}/>
-      )}
-      <Switch location={location} key={location.pathname}>
-        <Route path="/" component={Homepage} />
-      </Switch>
-      {!loading && (
-        <Footer key="1" setIsLoading={setLoading}/>
-      )}
-    </AnimatePresence>
+    <AnimateSharedLayout type="crossfade">
+      <AnimatePresence>
+        {loading ? (
+          <Loader setLoading={setLoading} />
+        ) : (
+          <>
+          <Header setLoading={setLoading}/>
+            <Switch location={location} key={location.pathname}>
+              {/* Main CCA Website */}
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/exhibits/taft-and-the-burnham-plan" component={Taft}/>
+              <Route path="/exhibits/*" component={ComingSoon}/>
+              <Route exact component={NotFound} />
+              {/* Taft And The Burnham Plan */}
+            </Switch>
+          <Footer key="1" setIsLoading={setLoading}/>
+          </>
+        )}
+      </AnimatePresence>
+    </AnimateSharedLayout>
   )
 }
 

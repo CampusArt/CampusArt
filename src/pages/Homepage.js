@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect } from "react";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import { Link } from "react-router-dom"
 import {
   useViewportScroll,
-  AnimatePresence, 
+  // AnimatePresence, 
   useTransform,
   motion
 } from "framer-motion"
@@ -11,29 +11,28 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 // Components
-import Loader from "../components/Loader";
 import AnimatedCharacters from "../components/AnimatedText";
 import Banners from "../data";
 
 // Assets
 import topScreenPic from "../assets/images/TopScreenPic.jpg"
 
-export default function Homepage() {
+export default function Homepage({ setLoading }) {
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loading
-      ?  document.querySelector("body").classList.add("loading")
-      : document.querySelector("body").classList.remove('loading');
-  }, [loading])
+  // useEffect(() => {
+  //   loading
+  //     ?  document.querySelector("body").classList.add("loading")
+  //     : document.querySelector("body").classList.remove('loading');
+  // }, [loading])
 
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    },4000)
-  }, [loading]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   },4000)
+  // }, [loading]);
 
 
   const wrapper = {
@@ -79,11 +78,11 @@ export default function Homepage() {
       autoRefreshEvents: "visibilitychange, DOMContentLoaded, load"
     });
 
-    if(!loading) {
+    if(setLoading === false) {
       ScrollTrigger.matchMedia({
 
         // Desktop
-        "(min-width: 812px)": () => {
+        "(max-width: 813px)": () => {
           gsap.to("#banner-wrapper .banner-details", {
             scrollTrigger: {
               scroller: document.body,
@@ -126,137 +125,128 @@ export default function Homepage() {
         }
       })
     }
-  }, [loading])
+  }, [setLoading])
   return (
-    <AnimatePresence>
-      {loading ? (
-        <motion.div key="loader">
-          <Loader setLoading={setLoading} />
-        </motion.div>
-      ) : (
-        <motion.main
-          id="homepage"
-        >
-          {/* React Helmet */}
-          <HelmetProvider>
-            <Helmet>
-              <meta name="title" content="Center for Campus Art | Art &amp; Design Installations and exhibits of De La Salle-College of Saint Benilde" />
-              <title>Center for Campus Art &mdash; The official De La Salle-College of Saint Benilde</title>
-            </Helmet>
-          </HelmetProvider>
-          <div className="container">
-            <div className="grid">
+    <motion.main
+      id="homepage"
+    >
+      {/* React Helmet */}
+      <HelmetProvider>
+        <Helmet>
+          <meta name="title" content="Center for Campus Art | Art &amp; Design Installations and exhibits of De La Salle-College of Saint Benilde" />
+          <title>Center for Campus Art &mdash; The official De La Salle-College of Saint Benilde</title>
+        </Helmet>
+      </HelmetProvider>
+      <div className="container">
+        <div className="grid">
 
-              <section id="landing">
-                <motion.div
-                  id="main-title"
-                  initial="hidden"
-                  // animate="visible"
-                  animate={loading ? "hidden" : "visible"}
-                  variants={wrapper}
-                  style={{
-                    y: y2
-                  }}
-                >
-                  <div style={{paddingRight: "10px"}}>
-                    {
-                      title.map((item, index) => {
-                        return <AnimatedCharacters {...item} key={index} />;
-                      })
-                    }
-                  </div>
-                </motion.div>
-                <motion.div
-                  id="about-landing"
-                  variants={landingParagraph}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  <p>The Center for Campus Art / CCA explores the intersections of art, design, society, communities, and the environment through exhibitions. The CCA operates under the Office of the President of the De La Salle-College of Saint Benilde, Manila, Philippines and is headed by Ar Gerry Torres as Director and Curator.</p>
-                </motion.div>
-                <motion.div
-                  style={{
-                    display: "flex",
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '100%',
-                    position: 'absolute',
-                  }}
-                >
-                  
-                  {/* <motion.div
-                    id="topscreenPic"
-                    initial={{opacity: 0, y: -100}}
-                    animate={{opacity: 1, y: 0, transition: {delay: 2}}}
-                    style={{
-                      y: y1,
-                      zIndex: '0',
-                      isolation: "isolate"
-                    }}
-                  >
-                  </motion.div> */}
-                  <motion.img
-                    id="topscreenPic"
-                    initial={{opacity: 0, y: -100}}
-                    animate={{opacity: 1, y: 0, transition: {delay: 2}}}
-                    src={topScreenPic}
-                    alt=""
-                    style={{
-                      y: y1,
-                      isolation: "isolate"
-                    }}
-                  />
-                </motion.div>
-              </section>
-              <section id="featured-exhibits">
-                <div className="wrapper">
-                  <div className="title flex">
-                    <h1>EXHIBITS<br/>2021</h1>
-                    <p>Upcoming exhibits this coming September</p>
-                  </div>
-                  <div id="banner-wrapper">
-                    <div style={{position: 'relative'}}>
-                      {
-                        Banners.map((banner) => {
-                          return (
-                            <div
-                              key={banner.id}
-                              className="banner"
-                            >
-                              <div className="banner-content">
-                                <h1
-                                  style={{
-                                    y: y1,
-                                  }}
-                                  dangerouslySetInnerHTML={{__html: banner.title}}
-                                />
-                                <Link to={`/exhibit/${banner.id}`}>
-                                  <div 
-                                    className="banner-bg"
-                                    style={{
-                                      backgroundImage: `url(${banner.banner})`
-                                    }}
-                                  ></div>
-                                </Link>
-                                <div className="banner-details">
-                                  <p className="banner-date">{banner.date}</p>
-                                  <p className="banner-description">{banner.description}</p>
-                                </div>
-                              </div>
+          <section id="landing">
+            <motion.div
+              id="main-title"
+              initial="hidden"
+              // animate="visible"
+              animate={setLoading ? "hidden" : "visible"}
+              variants={wrapper}
+              style={{
+                y: y2
+              }}
+            >
+              <div style={{paddingRight: "10px"}}>
+                {
+                  title.map((item, index) => {
+                    return <AnimatedCharacters {...item} key={index} />;
+                  })
+                }
+              </div>
+            </motion.div>
+            <motion.div
+              id="about-landing"
+              variants={landingParagraph}
+              initial="hidden"
+              animate="visible"
+            >
+              <p>The Center for Campus Art / CCA explores the intersections of art, design, society, communities, and the environment through exhibitions. The CCA operates under the Office of the President of the De La Salle-College of Saint Benilde, Manila, Philippines and is headed by Ar Gerry Torres as Director and Curator.</p>
+            </motion.div>
+            <motion.div
+              style={{
+                display: "flex",
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                position: 'absolute',
+              }}
+            >
+              
+              {/* <motion.div
+                id="topscreenPic"
+                initial={{opacity: 0, y: -100}}
+                animate={{opacity: 1, y: 0, transition: {delay: 2}}}
+                style={{
+                  y: y1,
+                  zIndex: '0',
+                  isolation: "isolate"
+                }}
+              >
+              </motion.div> */}
+              <motion.img
+                id="topscreenPic"
+                initial={{opacity: 0, y: -100}}
+                animate={{opacity: 1, y: 0, transition: {delay: 2}}}
+                src={topScreenPic}
+                alt=""
+                style={{
+                  y: y1,
+                  isolation: "isolate"
+                }}
+              />
+            </motion.div>
+          </section>
+          <section id="featured-exhibits">
+            <div className="wrapper">
+              <div className="title flex">
+                <h1>EXHIBITS<br/>2021</h1>
+                <p>Upcoming exhibits this coming September</p>
+              </div>
+              <div id="banner-wrapper">
+                <div style={{position: 'relative'}}>
+                  {
+                    Banners.map((banner) => {
+                      return (
+                        <div
+                          key={banner.id}
+                          className="banner"
+                        >
+                          <div className="banner-content">
+                            <h1
+                              style={{
+                                y: y1,
+                              }}
+                              dangerouslySetInnerHTML={{__html: banner.title}}
+                            />
+                            <Link to={`/exhibit/${banner.id}`}>
+                              <div 
+                                className="banner-bg"
+                                style={{
+                                  backgroundImage: `url(${banner.banner})`
+                                }}
+                              ></div>
+                            </Link>
+                            <div className="banner-details">
+                              <p className="banner-date">{banner.date}</p>
+                              <p className="banner-description">{banner.description}</p>
                             </div>
-                          )
-                        })
-                      }
-                    </div>
-                  </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
                 </div>
-              </section>
-              {/* <section></section> */}
+              </div>
             </div>
-          </div>
-        </motion.main>
-      )
-    }
-  </AnimatePresence>
+          </section>
+          {/* <section></section> */}
+        </div>
+      </div>
+    </motion.main>
   )
 }
