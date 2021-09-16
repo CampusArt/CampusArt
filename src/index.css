@@ -1,7 +1,7 @@
 /*CSS Reset*/
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-* { margin: 0; padding: 0; box-sizing: border-box }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif !important;}
 
 /* =============================
   Custom classes and variables 
@@ -44,6 +44,9 @@ body.loading {
   overflow: hidden;
 }
 
+main {
+  padding: 150px 0px;
+}
 /* ======= COMPONENTS ====== */
 
 /* Loading
@@ -480,12 +483,79 @@ footer ul li { margin: 0px 5px; }
 /* Exhibits
 -----------------------------*/
 
-/* Taft */
+/* Taft Home */
 #taft #landing {
-  height: 100vh;
-
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#taft #landing .quote p {
+  text-align: center;
+  font-style: italic
+}
+#taft.home h1{
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 3rem)
+}
+#taft.home { background-color: #D4BC8B; }
+#taft.home #second p {
+  padding: 12px 0px;
+  font-weight: 300;
+  text-align: center;
+}
+#taft.home #second > .wrapper {
+  width: 100%;
+  max-width: 566px;
+  margin: 0 auto;
+}
+#taft.home #second > .wrapper a {
+  color: #000;
+  display: block;
+  margin: 10px 0px;
+}
+#taft.home .quote {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+} 
+#taft.home #exhibits {
+  display: flex;
+  justify-content: center;
+}
+
+/* Taft Briefing */
+#taft.briefing {
+  background-color: #D4BC8B;
+}
+
+#taft.briefing .container {
+  width: 70%
+}
+
+#taft.briefing h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#taft.briefing p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+#taft.briefing p.quote {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#taft.briefing p.author {
+  text-align: right;
+  margin-bottom: 50px;
+}
 
 /* GLITCH EFFECT */
 @keyframes glitch {
@@ -550,5 +620,9 @@ footer ul li { margin: 0px 5px; }
     justify-content: flex-start;
     max-width: unset;
     padding: 10px 0px;
+  }
+
+  #taft.briefing .container {
+    width: 100%
   }
 }

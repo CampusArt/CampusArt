@@ -127,7 +127,7 @@ export default function Header({ setIsLoading }) {
                           filter: 'grayscale(100%)'
                         }}
                         onClick={() => {
-                          history.push(`/exhibits/${banner.url}`);
+                          history.push(`/exhibit/${banner.url}`);
                           setIsActive(!isActive)
                         }}
                       >

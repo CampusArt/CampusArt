@@ -13,15 +13,19 @@ import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 
 // Pages
-import Homepage from "./pages/Homepage.js";
-import NotFound from "./pages/NotFound.js";
-import ComingSoon from "./pages/ComingSoon.js";
-import Taft from "./pages/exhibits/Taft.js";
+import Homepage from "./pages/Homepage";
+import NotFound from "./pages/NotFound";
+import ComingSoon from "./pages/ComingSoon";
+import Taft from "./pages/exhibits/taft/index";
+import TaftBriefing from "./pages/exhibits/taft/briefing";
+import Manila1905 from './pages/exhibits/taft/manila-1905';
+import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
+import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
 
 //eslint-disable-next-line
 function App() {
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -46,10 +50,15 @@ function App() {
             <Switch location={location} key={location.pathname}>
               {/* Main CCA Website */}
               <Route exact path="/" component={Homepage} />
-              <Route exact path="/exhibits/taft-and-the-burnham-plan" component={Taft}/>
-              <Route path="/exhibits/*" component={ComingSoon}/>
-              <Route exact component={NotFound} />
               {/* Taft And The Burnham Plan */}
+              <Route exact path="/exhibit/taft-and-the-burnham-plan" component={Taft}/>
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/briefing" component={TaftBriefing}/>
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-1905" component={Manila1905}/>
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown" component={ManilaLockDown}/>
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
+              {/* Not Found */}
+              <Route path="/exhibit/*" component={ComingSoon}/>
+              <Route exact component={NotFound} />
             </Switch>
           <Footer key="1" setIsLoading={setLoading}/>
           </>
