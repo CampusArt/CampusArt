@@ -165,21 +165,22 @@ export default function Taft() {
               <li><a href="https://www.esquiremag.ph/culture/lifestyle/old-intramuros-vintage-photos/"><p>https://www.esquiremag.ph/culture/lifestyle/old-intramuros-vintage-photos</p></a></li>
             </ul>
           </div>
-          <section id="exhibits">
-            <div className="flex navBoxes">
-              <Link to="/exhibit/taft-and-the-burnham-plan/manila-1905">
-                <h3>Back to top</h3>
-              </Link>
-              <Link to="/exhibit/taft-and-the-burnham-plan/manila-lockdown">
-                <h3>Manila Lockdown</h3>
-                <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
-              </Link>
-              <Link to="/exhibit/taft-and-the-burnham-plan/manila-reimagined">
-                <h3>Manila Reimagined</h3>
-                <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
-              </Link>
-            </div>
-          </section>
+        </div>
+      </section>
+      
+      <section id="exhibits">
+        <div className="flex navBoxes">
+          <Link to="/exhibit/taft-and-the-burnham-plan/manila-1905">
+            <h3>Back to top</h3>
+          </Link>
+          <Link to="/exhibit/taft-and-the-burnham-plan/manila-lockdown">
+            <h3>Manila Lockdown</h3>
+            <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
+          </Link>
+          <Link to="/exhibit/taft-and-the-burnham-plan/manila-reimagined">
+            <h3>Manila Reimagined</h3>
+            <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
+          </Link>
         </div>
       </section>
     </main>
