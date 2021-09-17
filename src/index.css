@@ -39,7 +39,7 @@ body.loading {
 .flex {
   display: flex;
 }
-.slick-track {
+/* .slick-track {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -48,8 +48,13 @@ body.loading {
   color: #fff;
   text-align: left;
   background: #000;
+} */
+
+.reactCarousel {
+  position: relative;
 }
-div.slick-slide > div > div {
+
+/* div.slick-slide > div > div {
   display: flex !important;
   align-items: center;
   width: 100%;
@@ -72,7 +77,37 @@ div.slick-slide > div > div {
 .slick-slide img {
   height: 100%;
   max-height: 500px;
+} */
+
+
+ 
+.sliderReact .slick-prev,
+.sliderReact .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
+
+
+.sliderReact {
+  position: relative;
+}
+
+.sliderReact .slick-prev,
+.sliderReact .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index:1;
+}
+
+.sliderReact .slick-prev {
+  left: 5%;
+}
+
+.sliderReact .slick-next {
+  right: 5%;
+}
+
 /* 
 main {
   padding: 150px 0px;
@@ -889,6 +924,8 @@ main#taft.alfspot a {
   color: #000;
   font-weight: 600;
 }
+
+
 /* GLITCH EFFECT */
 @keyframes glitch {
   0% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
