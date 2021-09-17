@@ -1,22 +1,56 @@
 import { Link } from "react-router-dom";
-import navBox from '../../../components/exhibit/navBoxes'
+import { navBox } from '../../../components/exhibit/navBoxes'
+import { useViewportScroll, useTransform, motion } from "framer-motion"
+
+// Assets
+import map from "../../../assets/images/map.png"
 
 export default function Taft() {
+  
+  const { scrollY } = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 812], [0, 300]);
+
   return (
     <main id="taft" className="home">
       <section id="landing">
         <div className="container">
-          <navBox/>
           <div className="quote">
-            <p>
+            <motion.p
+              initial={{opacity: 0, y: -25}}
+              animate={{opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 }}}
+            >
               "Possessing the bay of Naples, the winding river of Paris, <br></br>
               and the canals of Venice, Manila has before it an opportunity  <br></br>
               unique in history of modern times, the opportunity to create  <br></br>
               a unified city equal to the greatest of the Western world  <br></br>
               with the unparalleled and priceless addition of a tropical setting."
-            </p>
-            <p style={{fontWeight: '600', fontStyle: 'normal', padding: '24px 0px'}}>- Daniel Burnham</p>
+            </motion.p>
+            <motion.p 
+              initial={{opacity: 0, y: -25}}
+              animate={{opacity: 1, y: 0, transition: { duration: 1, delay: 2 }}}
+              style={{
+                fontWeight: '400', 
+                fontStyle: 'normal',
+                padding: '24px 0px',
+              }}
+            >
+              - Daniel Burnham
+            </motion.p>
           </div>
+          <motion.img
+            src={map} 
+            alt="" 
+            style={{
+              position: 'absolute',
+              width: '100%',
+              maxWidth: '866px',
+              opacity: 0.3,
+              right: 0,
+              top: '25%',
+              zIndex: 0,
+              y: y1
+            }}
+          />
         </div>
       </section>
       <section id="second">
@@ -34,10 +68,34 @@ export default function Taft() {
         </div>
       </section>
       <section id="exhibits">
+        <div className="container navBoxes">
+          <div>
+            <Link to="/exhibits/taft-and-the-burnham-plan/manila-1905">
+              <h3>Manila 1905</h3>
+              <p>A vision of an American city in Asia at the beginning of the 20th century</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/exhibits/taft-and-the-burnham-plan/manila-1905">
+              <h3>Manila Lockdown</h3>
+              <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
+            </Link>
+          </div>
+          <div>
+            <Link to="/exhibits/taft-and-the-burnham-plan/manila-1905">
+              <h3>Manila Reimagined</h3>
+              <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section id="acknowledgements">
         <div className="container">
-          <div></div>
-          <div></div>
-          <div></div>
+          <h1>Acknowledgements</h1>
+          <div>
+            <p>Ar. Jim Cameron</p>
+            <p>Ar. Harvey Vasquez</p>
+          </div>
         </div>
       </section>
     </main>
