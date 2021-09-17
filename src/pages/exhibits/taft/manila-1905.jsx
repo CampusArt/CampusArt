@@ -21,7 +21,7 @@ import OldIntraStreet2 from "../../../assets/images/OldIntraStreet2.jpg"
 
 export default function Taft() {
   let history = useHistory();
-  
+
   return (
     <main id="taft" className="manila-1905">
       <section id="landing">
@@ -178,6 +178,7 @@ export default function Taft() {
           >
             <div>
               <h3>Back to top</h3>
+              <p></p>
             </div>
           </div>
           <div 

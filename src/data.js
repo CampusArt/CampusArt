@@ -5,7 +5,7 @@ export const Banners = [
     status: "published",
     url: "taft-and-the-burnham-plan",
     date: "September 21, 2021",
-    banner: "https://i.ibb.co/P411McZ/Taft-And-The-Burnham-Plan.png",
+    banner: "https://i.ibb.co/1TcdR1m/Screen-Shot-2021-09-14-at-12-11-1.jpg",
     description: "An online exhibit on Ar Daniel Burnham and the 1905 Plan of Manila with the BS-Architecture students of Ar Jim Caumeron De La Salle-College of Saint Benilde",
   },
   {
@@ -23,7 +23,7 @@ export const Banners = [
     status: 'draft',
     url: "farrales-x-fdm",
     date: "September 21, 2021",
-    banner: "https://i.ibb.co/t2wRTGg/Farrales-XFDM.png",
+    banner: "https://i.ibb.co/NT26WZF/FARRALESBANNER-2.png",
     description: "An Instagram exhibit on the Dean of Philippine Fashion Ben Farrales and the students of Benilde’s Fashion Design and Merchandising program",
   },
   // {

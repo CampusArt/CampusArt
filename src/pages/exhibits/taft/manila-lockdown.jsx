@@ -24,7 +24,9 @@ export default function ManilaLockDown() {
           <h1>ALFSPOT QUARANTINE PROJECT</h1>
           <h4>TJ Aquino</h4>
         </Link>
-        <a href="#" style={{ backgroundImage: `url(${ManilaMania})`}}>
+        
+        {/* eslint-disable-next-line */}
+        <a href="#" onClick={()=> {return null }}style={{ backgroundImage: `url(${ManilaMania})`}}>
           <h4>COMING SOON</h4>
           <h1 style={{letterSpacing: '0.7em'}}>MANILA MANIA</h1>
           <h4>Gerome Soriano</h4>
@@ -34,11 +36,12 @@ export default function ManilaLockDown() {
         <div className="flex container navBoxes">
           <div
             onClick={() => {
-              window.scrollTo(0,0);
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-1905')
             }}
           >
             <div>
-              <h3>Back to top</h3>
+              <h3>Manila 1905</h3>
+              <p>A vision of an American city in Asia at the beginning of the 20th century</p>
             </div>
           </div>
           <div 

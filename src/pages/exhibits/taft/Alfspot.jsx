@@ -1,9 +1,9 @@
 import CarouselSlider from "../../../components/Slider";
 import image from "../../../assets/images/whitecity7.jpg";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Alfspot() {
-  let history = useHistory()
+  // let history = useHistory();
   return (
     <main id="taft" className="alfspot">
       <div className="container">
@@ -31,15 +31,15 @@ export default function Alfspot() {
         <Link to="/exhibit/taft-and-the-burnham-plan/manila-lockdown/" style={{fontSize: '21px', textDecoration: 'underline'}}><p>Return to previous page</p></Link>
       </div>
       
-      <section id="exhibits">
+      {/* <section id="exhibits">
         <div className="flex container navBoxes">
           <div
             onClick={() => {
-              window.scrollTo(0,0);
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-1905')
             }}
           >
             <div>
-              <h3>Back to top</h3>
+              <h3>Manila 1905</h3>
             </div>
           </div>
           <div 
@@ -63,7 +63,7 @@ export default function Alfspot() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }

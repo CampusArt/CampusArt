@@ -2,7 +2,7 @@ import Slider from "react-slick";
 
 export default function CarouselSlider({data}) {
   const settings = {
-    dots: false,
+    dots: true,
     fade: true,
     infinite: true,
     speed: 500,
