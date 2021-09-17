@@ -22,11 +22,12 @@ import TaftBriefing from "./pages/exhibits/taft/briefing";
 import Manila1905 from './pages/exhibits/taft/manila-1905';
 import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
 import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
+// import Ferrales from './pages/exhibits/ferrales/index';
 
 //eslint-disable-next-line
 function App() {
   const location = useLocation();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
@@ -42,27 +43,26 @@ function App() {
           <Loader setLoading={setLoading} />
         ) : (
           <>
-          <Header setLoading={setLoading}/>
+            <Header setLoading={setLoading}/>
             <Switch location={location} key={location.pathname}>
-              {/* Main CCA Website */}
               <Route exact path="/" component={Homepage} />
+
               {/* Taft And The Burnham Plan */}
               <Route exact path="/exhibit/taft-and-the-burnham-plan" component={Taft}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/briefing" component={TaftBriefing}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-1905" component={Manila1905}/>
-
-              {/* TAFT AND THE BURNHAM PLAN MANILA LOCKDOWN */}
-
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown" component={ManilaLockDown}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown/alfspot-quarantine-project" component={Alfspot}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
 
-              
+              {/* FARRALES */}
+              {/* <Route exact path="/exhibit/farrales-x-fdm" component={Ferrales}/> */}
+
               {/* Not Found */}
               <Route path="/exhibit/*" component={ComingSoon}/>
               <Route exact component={NotFound} />
             </Switch>
-          <Footer key="1" setIsLoading={setLoading}/>
+            <Footer setIsLoading={setLoading}/>
           </>
         )}
       </AnimatePresence>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { navBox } from '../../../components/exhibit/navBoxes'
+// import { navBox } from '../../../components/exhibit/navBoxes'
 import { useViewportScroll, useTransform, motion } from "framer-motion"
 
 // Assets

@@ -217,12 +217,12 @@ export default function Homepage({ setLoading }) {
                           className="banner"
                         >
                           <div className="banner-content">
-                            <h1
+                            {/* <h1
                               style={{
                                 y: y1,
                               }}
                               dangerouslySetInnerHTML={{__html: banner.title}}
-                            />
+                            /> */}
                             <Link to={`/exhibit/${banner.url}`}>
                               <div 
                                 className="banner-bg"

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {motion} from "framer-motion";
-import Logo from "../assets/images/CCA-Logo.svg"
+import Logo from "../assets/images/CCALOGO_white 1.png"
 // import AnimatedCharacters from "../components/AnimatedText";
 
 // Variants
@@ -77,32 +77,6 @@ const Loader = ({ setLoading }) => {
             color: "#fff"
           }}
         />
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          paddingTop: "32px"
-        }}>
-          <motion.p
-            initial={{opacity: 0, scale: 0}}
-            animate={{opacity: 1, scale: 1, transition: {delay: 0.2}}}
-            exit={{opacity: 0, scale: 0}}
-          >CENTER</motion.p>
-          <motion.p
-            initial={{opacity: 0, scale: 0}}
-            animate={{opacity: 1, scale: 1, transition: {delay: 0.4}}}
-            exit={{opacity: 0, scale: 0}}
-          >FOR</motion.p>
-          <motion.p
-            initial={{opacity: 0, scale: 0}}
-            animate={{opacity: 1, scale: 1, transition: {delay: 0.6}}}
-            exit={{opacity: 0, scale: 0}}
-          >CAMPUS</motion.p>
-          <motion.p
-            initial={{opacity: 0, scale: 0}}
-            animate={{opacity: 1, scale: 1, transition: {delay: 0.8}}}
-            exit={{opacity: 0, scale: 0}}
-          >ART</motion.p>
-        </div>
       </motion.div>
     </motion.div>
   )
