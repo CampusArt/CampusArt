@@ -21,7 +21,7 @@ body.loading {
 
 .container {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px 12px;
 }
@@ -43,10 +43,10 @@ body.loading {
 .hide-scroll {
   overflow: hidden;
 }
-
+/* 
 main {
   padding: 150px 0px;
-}
+} */
 /* ======= COMPONENTS ====== */
 
 /* Loading
@@ -488,46 +488,111 @@ footer ul li { margin: 0px 5px; }
   height: 100%;
   min-height: 100vh;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
 }
-
-#taft #landing .quote p {
+#taft .quote {
   text-align: center;
   font-style: italic
 }
 #taft.home h1{
   text-align: center;
-  font-size: clamp(1rem, 2vw, 3rem)
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  font-weight: 400;
+  line-height: 1em;
+  padding: 24px 0px;
 }
-#taft.home { background-color: #D4BC8B; }
+#taft.home { 
+  /* background-color: #D4BC8B;  */
+  background-image: url('./assets/images/ExhibitBrief.jpg');
+  backdrop-filter: contrast(100%);
+}
+#taft.home .container {
+  overflow: hidden;
+}
+#taft.home #second {
+  position: relative;
+}
 #taft.home #second p {
   padding: 12px 0px;
   font-weight: 300;
   text-align: center;
 }
-#taft.home #second > .wrapper {
+#taft.home #second .wrapper {
   width: 100%;
-  max-width: 566px;
+  max-width: 720px;
   margin: 0 auto;
+  height: 100%;
+  min-height: 1080px;
+  max-height: 100vh;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-#taft.home #second > .wrapper a {
+#taft.home #second .wrapper a {
   color: #000;
-  display: block;
+  display: inline-block;
   margin: 10px 0px;
 }
 #taft.home .quote {
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
 } 
-#taft.home #exhibits {
+#taft #exhibits {
   display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 667px;
+  max-height: 100vh;
+}
+#taft.home #exhibits .container {
+  padding: 0;
+}
+.navBoxes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navBoxes a {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  border: solid 1px #000;
+  align-items: center;
   justify-content: center;
+  height: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  width: 100%;
+  min-width: 250px;
+  padding: 50px 12px;
+  flex: 1;
+  color: #000;
+}
+.navBoxes a p {
+  display: none;
+}
+.navBoxes a:hover p {
+  display: block;
+}
+.navBoxes a h3 {
+  border-bottom: solid 1.5px #000;
+  display: block;
+  width: 70%;
+}
+#taft.home #acknowledgements .container {
+  text-align: center;
 }
 
 /* Taft Briefing */
 #taft.briefing {
-  background-color: #D4BC8B;
+  background-image: url('./assets/images/ExhibitBrief.jpg');
+  padding: 100px 0px;
 }
 
 #taft.briefing .container {
@@ -536,14 +601,14 @@ footer ul li { margin: 0px 5px; }
 
 #taft.briefing h1 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 #taft.briefing p {
   font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   margin-bottom: 50px;
 }
 
@@ -555,6 +620,55 @@ footer ul li { margin: 0px 5px; }
 #taft.briefing p.author {
   text-align: right;
   margin-bottom: 50px;
+}
+
+/* Taft Manila 1905 */
+#taft.manila-1905 {
+  background-image: url('./assets/images/Manila1905.jpg')
+}
+#taft.manila-1905 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#taft.manila-1905 .container div{
+  width: 100%;
+}
+#taft.manila-1905 div h1 {
+  border-bottom: 2px solid #000;
+  font-size: 38px;
+  font-weight: 500;
+}
+#taft.manila-1905 div h4 {
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  padding: 24px 0px;
+}
+#taft.manila-1905 div h1,
+#taft.manila-1905 div h4 {
+  padding: 24px 0px;
+  text-align: center;
+}
+#taft.manila-1905 p {
+  padding: 12px 0px;
+  font-weight: 300;
+}
+#taft.manila-1905 .caption {
+  font-weight: 300;
+  font-size: 14px;
+}
+#taft.manila-1905 a {
+  color: #000;
+  text-decoration: none;
+}
+#taft.manila-1905 ul li {
+  list-style: none;
+}
+#taft.manila-1905 ul li p {
+  padding: 0;
+
 }
 
 /* FERRALES X FDM */
@@ -672,5 +786,9 @@ footer ul li { margin: 0px 5px; }
 
   #taft.briefing .container {
     width: 100%
+  }
+  #taft .flex {
+    flex-direction: column;
+    justify-content: center;
   }
 }
