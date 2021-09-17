@@ -21,7 +21,6 @@ import OldIntraStreet2 from "../../../assets/images/OldIntraStreet2.jpg"
 
 export default function Taft() {
   let history = useHistory();
-
   return (
     <main id="taft" className="manila-1905">
       <section id="landing">
@@ -173,12 +172,12 @@ export default function Taft() {
         <div className="flex container navBoxes">
           <div
             onClick={() => {
-              window.scrollTo(0,0);
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-1905')
             }}
           >
             <div>
-              <h3>Back to top</h3>
-              <p></p>
+              <h3>Manila 1905</h3>
+              <p>A vision of an American city in Asia at the beginning of the 20th century</p>
             </div>
           </div>
           <div 

@@ -697,6 +697,9 @@ footer ul li { margin: 0px 5px; }
   justify-content: center;
   flex-direction: column;
 }
+#taft.manila-1905 #exhibits .container {
+  flex-direction: row;
+}
 #taft.manila-1905 .container div{
   width: 100%;
 }
