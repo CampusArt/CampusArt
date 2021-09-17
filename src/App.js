@@ -21,6 +21,7 @@ import TaftBriefing from "./pages/exhibits/taft/briefing";
 import Manila1905 from './pages/exhibits/taft/manila-1905';
 import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
 import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
+import Ferrales from './pages/exhibits/ferrales/index';
 
 //eslint-disable-next-line
 function App() {
@@ -56,6 +57,7 @@ function App() {
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-1905" component={Manila1905}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown" component={ManilaLockDown}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
+              <Route exact path="/exhibit/ferrales-x-fdm" component={Ferrales}/>
               {/* Not Found */}
               <Route path="/exhibit/*" component={ComingSoon}/>
               <Route exact component={NotFound} />

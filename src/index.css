@@ -557,6 +557,54 @@ footer ul li { margin: 0px 5px; }
   margin-bottom: 50px;
 }
 
+/* FERRALES X FDM */
+#ferrales {
+  background-color: #000;
+  min-height: 100vh;
+  height: 100%;
+  color: #fff;
+  padding-bottom: 100px
+}
+
+#ferrales #title {
+  color: #F412EF;
+  text-align: center;
+  font-size: 60px;
+}
+
+#ferrales #description {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#ferrales #description p:last-child {
+  margin-top: 20px;
+}
+
+#ferrales #description {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#ferrales #grid {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* justify-content: start; */
+  /* align-items: auto; */
+  /* align-content: start */
+}
+
+#ferrales #grid .item {
+  flex: 1 1 25%;
+  background-color: #fff;
+  height: 300px;
+  width: 300px;
+  margin: 20px
+}
+
 /* GLITCH EFFECT */
 @keyframes glitch {
   0% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
