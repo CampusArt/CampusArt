@@ -22,7 +22,7 @@ import TaftBriefing from "./pages/exhibits/taft/briefing";
 import Manila1905 from './pages/exhibits/taft/manila-1905';
 import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
 import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
-// import Ferrales from './pages/exhibits/ferrales/index';
+import Patchwork from "./pages/exhibits/taft/Patchwork";
 
 //eslint-disable-next-line
 function App() {
@@ -54,6 +54,7 @@ function App() {
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown" component={ManilaLockDown}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown/alfspot-quarantine-project" component={Alfspot}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/manila-city-halls-patchwork-city" component={Patchwork} />
 
               {/* FARRALES */}
               {/* <Route exact path="/exhibit/farrales-x-fdm" component={Ferrales}/> */}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory} from "react-router-dom";
 // import { navBox } from '../../../components/exhibit/navBoxes'
 import { useViewportScroll, useTransform, motion } from "framer-motion"
 
@@ -6,7 +6,7 @@ import { useViewportScroll, useTransform, motion } from "framer-motion"
 import map from "../../../assets/images/map.png"
 
 export default function Taft() {
-  
+  let history = useHistory();
   const { scrollY } = useViewportScroll();
   const y1 = useTransform(scrollY, [0, 812], [0, 300]);
 
@@ -68,19 +68,36 @@ export default function Taft() {
         </div>
       </section>
       <section id="exhibits">
-        <div className="container navBoxes">
-          <Link to="/exhibit/taft-and-the-burnham-plan/manila-1905">
-            <h3>Manila 1905</h3>
-            <p>A vision of an American city in Asia at the beginning of the 20th century</p>
-          </Link>
-          <Link to="/exhibit/taft-and-the-burnham-plan/manila-lockdown">
-            <h3>Manila Lockdown</h3>
-            <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
-          </Link>
-          <Link to="/exhibit/taft-and-the-burnham-plan/manila-reimagined">
-            <h3>Manila Reimagined</h3>
-            <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
-          </Link>
+        <div className="flex container navBoxes">
+          <div
+            onClick={() => {
+              window.scrollTo(0,0);
+            }}
+          >
+            <div>
+              <h3>Back to top</h3>
+            </div>
+          </div>
+          <div 
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-lockdown')
+            }}
+          >
+            <div>
+              <h3>Manila Lockdown</h3>
+              <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined')
+            }}
+          >
+            <div>
+              <h3>Manila Reimagined</h3>
+              <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="acknowledgements">

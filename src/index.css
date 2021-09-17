@@ -240,7 +240,7 @@ footer .container > p {
   padding: 12px 0px;
 }
 footer .container > p span {
-  letter-spacing: 1vw;
+  letter-spacing: 0.5vw;
 }
 footer ul {
   display: flex;
@@ -556,8 +556,7 @@ footer ul li { margin: 0px 5px; }
   max-width: 720px;
   margin: 0 auto;
   height: 100%;
-  min-height: 1080px;
-  max-height: 100vh;
+  min-height: 100vh;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -572,57 +571,47 @@ footer ul li { margin: 0px 5px; }
 #taft.home .quote {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-} 
-#taft #exhibits {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  min-height: 667px;
-  max-height: 100vh;
 }
-#taft.home #exhibits .container {
-  padding: 0;
+#taft.home #acknowledgements {
+  text-align: center;
 }
+
 .navBoxes {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.navBoxes a {
+.navBoxes > div {
   display: flex;
-  flex-direction: column;
-  margin: 10px;
-  text-decoration: none;
-  text-align: center;
+  margin: 4px;
   border: solid 1px #000;
+}
+.navBoxes > div,
+.navBoxes > div div{
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  min-height: 250px;
-  max-height: 250px;
-  width: 100%;
-  min-width: 250px;
-  padding: 50px 12px;
   flex: 1;
-  color: #000;
-}
-.navBoxes a p {
-  display: none;
-}
-.navBoxes a:hover p {
-  display: block;
-}
-.navBoxes a:hover {
-  background-color: #D4BC8B;
-}
-.navBoxes a h3 {
-  border-bottom: solid 1.5px #000;
-  display: block;
-  width: 70%;
-}
-#taft.home #acknowledgements .container {
+  height: 100%;
+  min-height: 300px;
   text-align: center;
+  cursor: pointer;
+  width: 100%;
 }
+.navBoxes > div div {
+  height: 100%;
+  flex-direction: column;
+  padding: 12px;
+}
+.navBoxes > div h3 {
+  border-bottom: solid 1px #000;
+  width: 80%;
+}
+.navBoxes > div div p { display: none; }
+.navBoxes > div div:hover p { display: block; }
+.navBoxes > div:nth-child(1) div:hover { background-color: #D4BC8B; }
+.navBoxes > div:nth-child(2) div:hover { background-color: #AAA9A8; }
+.navBoxes > div:nth-child(3) div:hover { background-color: #6EBC78; }
 
 /* Taft Briefing */
 #taft.briefing {
@@ -658,6 +647,12 @@ footer ul li { margin: 0px 5px; }
 }
 
 /* Taft Manila 1905 */
+#taft.manila-lockdown .navBoxes > div {
+  border: solid 1px #fff;
+}
+#taft.manila-lockdown .navBoxes > div div h3 {
+  border-bottom: solid 1px #fff;
+}
 #taft.manila-1905 {
   background-image: url('./assets/images/Manila1905.jpg')
 }
@@ -777,6 +772,9 @@ main#taft.alfspot {
   color: #fff;
   padding: 100px 0px;
 }
+main#taft.alfspot .navBoxes div div { border: solid 2px #fff; }
+main#taft.alfspot .navBoxes div div h3 { border-bottom: solid 2px #fff; }
+
 #taft.alfspot p {
   padding: 10px 0px;
   font-weight: 300;
@@ -847,6 +845,50 @@ main#taft.alfspot a {
   margin: 20px
 }
 
+/* ReImagined */
+
+#taft.reimagined {
+  background-size:contain;
+  background-repeat: repeat;
+  background-image: url('./assets//images/ManilaReimagined.jpg')
+}
+#taft.reimagined #landing {
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+#taft.reimagined h1 {
+  font-weight: 500;
+  padding: 24px 0px;
+  font-size: 38px;
+}
+#taft.reimagined h4 {
+  font-weight: 400;
+  font-size: 28px;
+  padding: 24px 0px;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+}
+#taft.reimagined p {
+  font-weight: 400;
+  padding: 15px 0px;
+}
+
+/*  Patchwork  */
+#taft.patchwork {
+  background: url('./assets/images/ManilaReimagined.jpg');
+  height: 100%;
+  padding: 100px 0px;
+}
+#taft.patchwork p {
+  padding: 14px 0px;
+  font-weight: 300;
+}
+#taft.patchwork a {
+  color: #000;
+  font-weight: 600;
+}
 /* GLITCH EFFECT */
 @keyframes glitch {
   0% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}

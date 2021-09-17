@@ -1,8 +1,9 @@
 import CarouselSlider from "../../../components/Slider";
 import image from "../../../assets/images/whitecity7.jpg";
-import {Link} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Alfspot() {
+  let history = useHistory()
   return (
     <main id="taft" className="alfspot">
       <div className="container">
@@ -27,8 +28,42 @@ export default function Alfspot() {
         <p>FB: <a href="www.facebook.com/TadjoPhoto ">www.facebook.com/TadjoPhoto </a></p>
         <p>IG: <a href="www.instagram.com/tjaquino_ ">www.instagram.com/tjaquino_</a></p>
         <p>Next: Manila Mania by Gerome Soriano</p>
-        <Link to="../" style={{fontSize: '21px', textDecoration: 'underline'}}><p>Return to previous page</p></Link>
+        <Link to="/exhibit/taft-and-the-burnham-plan/manila-lockdown/" style={{fontSize: '21px', textDecoration: 'underline'}}><p>Return to previous page</p></Link>
       </div>
+      
+      <section id="exhibits">
+        <div className="flex container navBoxes">
+          <div
+            onClick={() => {
+              window.scrollTo(0,0);
+            }}
+          >
+            <div>
+              <h3>Back to top</h3>
+            </div>
+          </div>
+          <div 
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-lockdown')
+            }}
+          >
+            <div>
+              <h3>Manila Lockdown</h3>
+              <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined')
+            }}
+          >
+            <div>
+              <h3>Manila Reimagined</h3>
+              <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

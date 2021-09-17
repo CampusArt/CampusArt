@@ -1,8 +1,9 @@
-import {Link} from "react-router-dom";
+import {useHistory, Link} from "react-router-dom";
 import ALFSPOT from "../../../assets/images/ALFSPOT.jpg";
 import ManilaMania from "../../../assets/images/ManilaMania.jpg";
 
 export default function ManilaLockDown() {
+  let history = useHistory();
   return (
     <main id="taft" className="manila-lockdown">
       <section id="landing">
@@ -23,7 +24,7 @@ export default function ManilaLockDown() {
           <h1>ALFSPOT QUARANTINE PROJECT</h1>
           <h4>TJ Aquino</h4>
         </Link>
-        <a href="javascript:void(0)" style={{ backgroundImage: `url(${ManilaMania})`}}>
+        <a href="#" style={{ backgroundImage: `url(${ManilaMania})`}}>
           <h4>COMING SOON</h4>
           <h1 style={{letterSpacing: '0.7em'}}>MANILA MANIA</h1>
           <h4>Gerome Soriano</h4>
@@ -31,22 +32,35 @@ export default function ManilaLockDown() {
       </section>
       <section id="exhibits">
         <div className="flex container navBoxes">
-          <a 
-            href="javascript:void(0)"
+          <div
             onClick={() => {
-              window.scrollTo(0,0)
+              window.scrollTo(0,0);
             }}
           >
-            <h3>Back to top</h3>
-          </a>
-          <Link to="/exhibit/taft-and-the-burnham-plan/manila-lockdown">
-            <h3>Manila Lockdown</h3>
-            <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
-          </Link>
-          <Link to="/exhibit/taft-and-the-burnham-plan/manila-reimagined">
-            <h3>Manila Reimagined</h3>
-            <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
-          </Link>
+            <div>
+              <h3>Back to top</h3>
+            </div>
+          </div>
+          <div 
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-lockdown')
+            }}
+          >
+            <div>
+              <h3>Manila Lockdown</h3>
+              <p>Sprawling, unwieldy, undefinable; here are glimpses of the city under lockdown</p>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined')
+            }}
+          >
+            <div>
+              <h3>Manila Reimagined</h3>
+              <p>Benilde architecture students propose visions of a gentler city, guided by the spirit  of the Burnham plan and their mentor, Ar Jim Caumeron</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

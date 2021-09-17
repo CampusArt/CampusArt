@@ -1,7 +1,7 @@
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Taft() {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <main id="taft" className="briefing">
