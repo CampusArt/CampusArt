@@ -933,6 +933,10 @@ main#taft.alfspot a {
   min-height: 100vh;
   background: #000;
   color: #fff;
+  background-image: url('./assets/images/TDD2BG.jpg');
+  background-repeat: repeat-y;
+  background-size: contain;
+  padding: 100px 0px;
 }
 #tdd2 p {
   margin: 21px 0px;
@@ -940,7 +944,6 @@ main#taft.alfspot a {
 }
 #tdd2.home #landing{
   height: 100%;
-  background: #010101;
   min-height: 720px;
 }
 #tdd2.home #landing .container {
@@ -958,27 +961,23 @@ main#taft.alfspot a {
   letter-spacing: 2px;
   z-index: 10;
 }
-#tdd2.home .bg {
-  width: 100%;
-  position: absolute;
-  max-width: 720px;
-  z-index: 0;
-}
-#tdd2.home .glow {
+#tdd2 .glow {
   text-shadow: 0px 0px 10px #fff;
 }
-#tdd2.home #exhibit-brief .container{
+#tdd2 #exhibit-brief .container{
   height: 100%;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
-#tdd2.home #exhibit-brief h1 {
+#tdd2 #exhibit-brief h1 {
   font-size: clamp(3rem, 5vw, 12rem);
   line-height: 1em;
 }
-#tdd2.home #exhibit-brief a {
+#tdd2 #exhibit-brief a {
   color: #fff;
   font-weight: 600;
 }
@@ -1008,7 +1007,7 @@ main#taft.alfspot a {
   max-width: 1200px;
 }
 #tdd2 .exhibits a {
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -1016,11 +1015,115 @@ main#taft.alfspot a {
   align-items: center;
   justify-content: center;
   border: solid 1px #fff;
-  min-width: 500px;
   margin: 10px;
-  max-width: 500px;
+  min-width: 500px;
+  background-color: #000;
+  position: relative;
+  filter: grayscale(1);
+  transition: 0.3s;
+}
+#tdd2 .exhibits a .content {
+  background-color: rgba(0,0,0,0.5);
+  width: 100%; 
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+}
+#tdd2 .exhibits a .content p {
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+#tdd2 .exhibits a .content h3 {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+#tdd2 .exhibits a .content h3,
+#tdd2 .exhibits a .content p {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+#tdd2 .exhibits a:hover .content h3,
+#tdd2 .exhibits a:hover .content p {
+  transform: scale(1);
+  opacity: 1;
+}
+#tdd2 .exhibits a .content.show h3,
+#tdd2 .exhibits a .content.show p {
+  opacity: 1;
+}
+#tdd2 .exhibits a:hover .static,
+#tdd2 .exhibits a:hover .static-rgb {
+  opacity: 0.25;
+}
+#tdd2 .exhibits a:hover {
+  filter: grayscale(0);
+  transition: 0.3s;
+}
+#tdd2 .exhibits .static{
+	background-image: url('./assets/images/static.gif');
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.3s;
+}
+#tdd2 .exhibits .static-rgb {
+	background-image: url('./assets/images/static-rgb.gif');
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.3s;
+}
+#tdd2.home #acknowledgements {
+  min-height: 50vh;
+  height: 100%;
+  max-height: 877px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 12px;
+}
+#tdd2.home #acknowledgements .content-wrapper {
+  z-index: 10;
+  position: relative;
+}
+#tdd2.home #acknowledgements p {
+  margin: 0;
+}
+/* TDD2 exhibit brief */
+#tdd2.xbtb #exhibit-brief{
+  padding: 100px 0px;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* TDD2 TEMPLATE FOR EXHIBITS */
+#tdd2.template .author {
+  font-size: clamp(1rem, 2vw, 12rem);
+  letter-spacing: 5px;
+  text-align: center;
+}
+#tdd2.template .title {
+  font-size: clamp(1.5rem, 5vw, 12rem);
+  letter-spacing: 5px;
+  text-align: center;
+}
+#tdd2.template section {
+  padding: 75px 0px;
+}
+#tdd2.template .section { margin: 12px 0px; }
+#tdd2.template .section h3 { text-transform: uppercase; font-size: 21px; }
+#tdd2.template a { color: #fff; display: block; font-size: 14px; }
 /* GLITCH EFFECT */
 @keyframes glitch {
   0% {text-shadow: 1px 0 0 red, -1px 0 0 blue;}
@@ -1096,5 +1199,10 @@ main#taft.alfspot a {
   /* TDD2 */
   #tdd2.home #featured-artworks .container {
     align-items: center;
+  }
+  #tdd2.home .exhibits a {
+    min-width: unset;
+    max-width: 500px;
+    width: 100%;
   }
 }

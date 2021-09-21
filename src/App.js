@@ -28,6 +28,8 @@ import Patchwork from "./pages/exhibits/taft/Patchwork";
 
 // TDD2
 import TDD2 from "./pages/exhibits/tdd2/index";
+import ExhibitBrief from "./pages/exhibits/tdd2/exhibit-brief";
+import HallOfHeroes from "./pages/exhibits/tdd2/hall-of-heroes";
 
 //eslint-disable-next-line
 function App() {
@@ -63,12 +65,15 @@ function App() {
 
               {/* TDD2 */}
               <Route exact path="/exhibit/to-differ-digitally" component={TDD2} />
+              <Route exact path="/exhibit/to-differ-digitally/exhibit-brief" component={ExhibitBrief} />
+              <Route exact path="/exhibit/to-differ-digitally/hall-of-heroes" component={HallOfHeroes} />
 
               {/* FARRALES */}
               {/* <Route exact path="/exhibit/farrales-x-fdm" component={Ferrales}/> */}
 
               {/* Not Found */}
               <Route path="/exhibit/*" component={ComingSoon}/>
+              <Route path="/exhibit/to-differ-digitally/coming-soon" component={ComingSoon}/>
               <Route exact component={NotFound} />
             </Switch>
             <Footer setIsLoading={setLoading}/>
