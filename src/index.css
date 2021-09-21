@@ -928,6 +928,98 @@ main#taft.alfspot a {
   font-weight: 600;
 }
 
+/* TDD2 */
+#tdd2 {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+}
+#tdd2 p {
+  margin: 21px 0px;
+  font-weight: 200;
+}
+#tdd2.home #landing{
+  height: 100%;
+  background: #010101;
+  min-height: 720px;
+}
+#tdd2.home #landing .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 720px;
+  max-height: 100vh;
+  position: relative;
+  justify-content: center;
+}
+#tdd2.home #landing .container .wrapper {
+  width: 100%;
+  max-width: 768px;
+  letter-spacing: 2px;
+  z-index: 10;
+}
+#tdd2.home .bg {
+  width: 100%;
+  position: absolute;
+  max-width: 720px;
+  z-index: 0;
+}
+#tdd2.home .glow {
+  text-shadow: 0px 0px 10px #fff;
+}
+#tdd2.home #exhibit-brief .container{
+  height: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#tdd2.home #exhibit-brief h1 {
+  font-size: clamp(3rem, 5vw, 12rem);
+  line-height: 1em;
+}
+#tdd2.home #exhibit-brief a {
+  color: #fff;
+  font-weight: 600;
+}
+#tdd2.home #featured-artworks {
+  position: relative;
+  height: 100%;
+  padding: 50px 0px;
+  min-height: 100vh;
+}
+#tdd2.home #featured-artworks .container {
+  z-index: 100;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#tdd2.home #featured-artworks .container h1 {
+  letter-spacing: 2px;
+}
+#tdd2 .exhibits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+#tdd2 .exhibits a {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #fff;
+  min-width: 500px;
+  margin: 10px;
+  max-width: 500px;
+}
 
 /* GLITCH EFFECT */
 @keyframes glitch {
@@ -1000,5 +1092,9 @@ main#taft.alfspot a {
   #taft .flex {
     flex-direction: column;
     justify-content: center;
+  }
+  /* TDD2 */
+  #tdd2.home #featured-artworks .container {
+    align-items: center;
   }
 }

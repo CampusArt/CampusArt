@@ -16,6 +16,8 @@ import Loader from "./components/Loader";
 import Homepage from "./pages/Homepage";
 import NotFound from "./pages/NotFound";
 import ComingSoon from "./pages/ComingSoon";
+
+// Taft & The Burnham Plan
 import Taft from "./pages/exhibits/taft/index";
 import Alfspot from "./pages/exhibits/taft/Alfspot";
 import TaftBriefing from "./pages/exhibits/taft/briefing";
@@ -24,10 +26,13 @@ import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
 import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
 import Patchwork from "./pages/exhibits/taft/Patchwork";
 
+// TDD2
+import TDD2 from "./pages/exhibits/tdd2/index";
+
 //eslint-disable-next-line
 function App() {
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
@@ -55,6 +60,9 @@ function App() {
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown/alfspot-quarantine-project" component={Alfspot}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/manila-city-halls-patchwork-city" component={Patchwork} />
+
+              {/* TDD2 */}
+              <Route exact path="/exhibit/to-differ-digitally" component={TDD2} />
 
               {/* FARRALES */}
               {/* <Route exact path="/exhibit/farrales-x-fdm" component={Ferrales}/> */}
