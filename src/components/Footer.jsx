@@ -2,7 +2,8 @@ import {FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faTwitter,
-  faInstagram
+  faInstagram,
+  faYoutube
 } from "@fortawesome/free-brands-svg-icons"
 
 export default function Footer({setIsLoading, setIsActive}){
@@ -35,6 +36,7 @@ export default function Footer({setIsLoading, setIsActive}){
             <li><a href="https://facebook.com/BenildeCampusArt"><FontAwesomeIcon icon={faFacebook} color="#DADADA" /></a></li>
             <li><a href="https://twitter.com/csbcampusart"><FontAwesomeIcon icon={faTwitter} color="#DADADA" /></a></li>
             <li><a href="https://instagram.com/benilde.campusart"><FontAwesomeIcon icon={faInstagram} color="#DADADA" /></a></li>
+            <li><a href="https://www.youtube.com/c/BenildeCampusArt"><FontAwesomeIcon icon={faYoutube} color="#DADADA"/></a></li>
           </ul>
         </div>
       </div>

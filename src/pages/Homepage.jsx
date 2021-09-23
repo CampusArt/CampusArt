@@ -165,7 +165,9 @@ export default function Homepage({ setLoading }) {
               initial="hidden"
               animate="visible"
             >
-              <p>The Center for Campus Art / CCA explores the intersections of art, design, society, communities, and the environment through exhibitions. The CCA operates under the Office of the President of the De La Salle-College of Saint Benilde, Manila, Philippines and is headed by Ar Gerry Torres as Director and Curator.</p>
+              <p>Exploring the intersections of art, design, society, communities, and the environment through exhibitions at  the De La Salle-College of Saint Benilde, Manila, Philippines. Established in 2015, the CCA has produced numerous exhibits installed at the college and in venues outside campus. </p>
+              <br/>
+              <p>In 2020, at the height of the pandemic, the CCA migrated its shows to the virtual through this website and on other online platforms. The CCA hopes to resume physical installations at the School of Design and Arts and in the other venues developed through the years but our online platforms remain and the virtual, from here on, will be integral to our future projects. The CCA is headed by Ar Gerry Torres. </p>
             </motion.div>
             <motion.div
               style={{
@@ -188,17 +190,19 @@ export default function Homepage({ setLoading }) {
                 }}
               >
               </motion.div> */}
-              <motion.img
-                id="topscreenPic"
-                initial={{opacity: 0, y: -100}}
-                animate={{opacity: 1, y: 0, transition: {delay: 2}}}
-                src={topScreenPic}
-                alt=""
-                style={{
-                  y: y1,
-                  isolation: "isolate"
-                }}
-              />
+              <div id="hero-wrapper" style={{position: 'relative', display: 'flex'}}>
+                <motion.img
+                  id="topscreenPic"
+                  initial={{opacity: 0, y: -100}}
+                  animate={{opacity: 1, y: 0, transition: {delay: 2}}}
+                  src={topScreenPic}
+                  alt=""
+                  style={{
+                    y: y1,
+                    isolation: "isolate"
+                  }}
+                />
+              </div>
             </motion.div>
           </section>
           <section id="featured-exhibits">

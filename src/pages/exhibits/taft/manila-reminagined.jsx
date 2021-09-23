@@ -1,5 +1,6 @@
 import {useHistory} from "react-router-dom";
 import Patchwork from "../../../assets/images/Patchwork.jpg";
+import Multigen from "../../../assets/images/Multigen.jpg"
 
 export default function ManilaReimagined() {
 
@@ -33,9 +34,15 @@ export default function ManilaReimagined() {
           >
             <img src={Patchwork} alt="Patchwork" width="100%" />
           </div>
-          <div style={{flex: '1', flexDirection: 'column', width: '100%', minHeight: "327px"}}>
-            <h3>“MULTI GENERATIONAL CITY”</h3>
-            <p>Abacahin and Buencamino</p>
+          <div
+            style={{
+              flex: '1',
+            }}
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/multi-generational-city')
+            }}
+          >
+            <img src={Multigen} alt="Multigenerational City" width="100%" />
           </div>
         </div>
       </section>

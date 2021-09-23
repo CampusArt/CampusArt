@@ -315,7 +315,7 @@ footer ul li { margin: 0px 5px; }
   color: #fff;
   position: relative;
   height: 100%;
-  min-height: 1080px;
+  min-height: 960px;
   max-height: 100vh;
 }
 #homepage #landing h1 {
@@ -366,7 +366,6 @@ footer ul li { margin: 0px 5px; }
   padding-left: 30px; 
 }
 #homepage #landing #topscreenPic {
-  background-image: url(./assets//images/TopScreenPic.jpg);
   mix-blend-mode: hard-light;
   backface-visibility: visible;
   -moz-backface-visibility: visible;
@@ -378,7 +377,17 @@ footer ul li { margin: 0px 5px; }
   background-repeat: no-repeat;
   left: 0;
   background-position: center;
-  margin: 50px;
+}
+#homepage #landing #hero-wrapper {
+  padding: 25px;
+}
+#homepage #landing #hero-wrapper::after {
+  display: block;
+  content: "THE SDA CHRISTMAS TREE 2018";
+  transform: rotate(90deg);
+  position: absolute;
+  right: -21%;
+  top:  25%;
 }
 #featured-exhibits {
   height: 100%;
@@ -914,16 +923,16 @@ main#taft.alfspot a {
 }
 
 /*  Patchwork  */
-#taft.patchwork {
+#taft.template {
   background: url('./assets/images/ManilaReimagined.jpg');
   height: 100%;
   padding: 100px 0px;
 }
-#taft.patchwork p {
+#taft.template p {
   padding: 14px 0px;
   font-weight: 300;
 }
-#taft.patchwork a {
+#taft.template a {
   color: #000;
   font-weight: 600;
 }
@@ -1204,5 +1213,13 @@ main#taft.alfspot a {
     min-width: unset;
     max-width: 500px;
     width: 100%;
+  }
+  #about-landing p,
+  #hero-wrapper::after {
+    font-size: 12px !important;
+  }
+  #hero-wrapper::after {
+    right: -15% !important;
+    top: 20% !important;
   }
 }

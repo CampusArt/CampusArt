@@ -25,6 +25,7 @@ import Manila1905 from './pages/exhibits/taft/manila-1905';
 import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
 import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
 import Patchwork from "./pages/exhibits/taft/Patchwork";
+import MultigenCity from "./pages/exhibits/taft/MultigenCity";
 
 // TDD2
 import TDD2 from "./pages/exhibits/tdd2/index";
@@ -62,6 +63,7 @@ function App() {
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown/alfspot-quarantine-project" component={Alfspot}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/manila-city-halls-patchwork-city" component={Patchwork} />
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/multi-generational-city" component={MultigenCity} />
 
               {/* TDD2 */}
               <Route exact path="/exhibit/to-differ-digitally" component={TDD2} />

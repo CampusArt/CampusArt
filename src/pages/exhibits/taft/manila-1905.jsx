@@ -7,6 +7,7 @@ import ColumbianExpo from "../../../assets/images/whitecity.jpg";
 import whiteCity2 from "../../../assets/images/whitecity 2.jpg";
 import whitecity3 from "../../../assets/images/whitecity 6.jpg"
 import PlanoDeManila from "../../../assets/images/PlanoDeManila.jpg";
+import Taft2 from "../../../assets/images/Taft2.jpg"
 // import Map5 from "../../../assets/images/Map5.png";
 // import CaviteBoulevard from "../../../assets/images/CaviteBoulevard.jpg"
 import ManilaPlan from "../../../assets/images/ManilaPlan.jpg";
@@ -93,7 +94,7 @@ export default function Taft() {
           <p style={{padding: '24px 0px'}}>In mid-1905, Burnham presented his plans for Manila to Commissioner Forbes and Secretary Taft. It consisted of two proposals, one for the development of an area next to Intramuros, and the other for a seaside boulevard that would extend south of the city towards Cavite. Forbes and Taft readily approved the plans. </p>
           <div className="flex">
             <div style={{width: '100%', flex: 1, alignItems: 'center', display: 'flex', flexDirection: 'column'}}>
-              <img src={DanielBurnham} alt="" width="100%" />
+              <img src={Taft2} alt="" width="100%" />
             </div>
             <p style={{padding: '12px', width: '100%', flex: 3, display: 'flex', alignItems: 'center'}}>
               Daniel Hudson Burnham was an American architect and urban planner. He was born on September 4, 1846 in New York but later moved with his family to Chicago where he did most of his schooling. In 1870, after living in other cities, Burnham returned to Chicago to establish his practice. Some of Burnham’s projects included the 10-storey Montauk Block (1882–83,) said to be the world’s first skyscraper, the Rookery (completed 1886,) the second Rand McNally Building (completed 1890, demolished 1911,) the Monadnock Building (completed 1891,) and the Masonic Temple (completed 1892,) the Flatiron Building in New York City (completed 1902,) Union Station in Washington D.C. (completed 1907,) London's Selfridges department store (completed 1909,) and San Francisco's Merchants Exchange (completed 1903.) Burnham created the master plans for a number of cities, including Chicago (1909,) San Francisco (1905,) Washington, D.C. (1901,) Manila (1905,) and Baguio (1905.) He died on June 1 1912 at Heidelberg, Germany at the age of 65.

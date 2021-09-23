@@ -51,7 +51,7 @@ export default function Patchwork() {
   };
 
   return (
-    <main id="taft" className="patchwork">
+    <main id="taft" className="template">
       <section id="landing">
         <div className="container">
           <Youtube
@@ -76,13 +76,13 @@ export default function Patchwork() {
             <div style={{margin: '10px'}}>
               <Youtube videoId="Y7oXUFjUwoI"/>
             </div>
-            <p>What also helped motivate us working on the project was the culture in our studio. Despite having groups with different concepts, we still managed to communicate with each other, exchange ideas and opinions, and further develop our design with Sir Jim’s guidance and critique. What inspired us the most to design were the relationships within the studio, that things don’t always need to be academically related for students and mentors to connect.</p>
+            <p><em>What also helped motivate us working on the project was the culture in our studio. Despite having groups with different concepts, we still managed to communicate with each other, exchange ideas and opinions, and further develop our design with Sir Jim’s guidance and critique. What inspired us the most to design were the relationships within the studio, that things don’t always need to be academically related for students and mentors to connect.</em></p>
           </div>
           <p>Most of the initial phase of the design process was trying to understand how other cities were planned. One disadvantage of studying urban planning in an online setting was the difficulty in tackling most of its physicality. For the initial phases, we were not able to explore the site, we relied heavily on maps, 3D softwares, and history. Despite inaccuracies, we really couldn’t do anything but assume the best. Through visualizations and precedents that enabled us to come up with the patchwork concept, we designed the dimensions of the city and how it shapes the spatiality of the community.</p>
           <p>The patchwork communities concept is basically the backbone of the project and this is what we want the viewers to see. Besides the video presentation, we want them to see the Walkthrough and see the vistas of the city that were based on Burnham’s imagination and principles for Manila.</p>
           <p>To our fellow Benildeans, we know how difficult it is especially being design students and finding inspiration during the lockdown when you’re stuck at home with the same setting. Studies can be overwhelming, unmotivating, sometimes a burnout. Take a break and rest. Sometimes the best ideas come from a random conversation with your friends or certain readings from a book. Stop letting your career wrap around your head. Life is more than just your personal career, it’s about where you are now because of the people who were there for you throughout your journey.</p>
 
-          <p><strong style={{fontWeight: '400'}}>Next: A Multigenerational City by Abacahin and Buencamino</strong></p>
+          <p><strong style={{fontWeight: '600'}}>Next: A Multigenerational City by Abacahin and Buencamino</strong></p>
           <div 
             style={{
               color: "#000",

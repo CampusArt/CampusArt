@@ -1,6 +1,14 @@
+import { useEffect } from "react"
 import Youtube from "react-youtube";
+import {Link} from "react-router-dom"
 
 export default function HallOfHeroes() {
+  
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+
   const opts = {
     height: '840px',
     width: '100%',
@@ -12,7 +20,7 @@ export default function HallOfHeroes() {
     <main id="tdd2" className="template">
       <div className="container">
         <Youtube
-          videoId="7ZtdK8b1t_E"
+          videoId="qm21uNkLTjg"
           opts={opts}
         />
         <h1 className="title glow">"HALL OF HEROES"</h1>
@@ -53,15 +61,23 @@ export default function HallOfHeroes() {
           <p>I was the President of the Animation Council of the Philippines Inc. (ACPI) from 2013 to 2015 and was part of its Board of Directors from 2006 to 2018. </p>
           <p>In Benilde, I headed the Toonbro production of “Frere: De La Salle, Patron Saint of Teachers,” (2013) a 46 minute an animated movie on the life of St. John Baptist De La Salle and “The Little One,” the life of St. Benilde Romancon (2015), a 15 minute animated shorts. </p>
           <p>At present, I am teaching courses on Animation Principles, Character Design, 2D Tradigital Animation, and Cut Out Animation.  I’m also into VR animation using Oculus Rift S and Oculus Quill.</p>
-          <p>My Animated Introduction video: <br/> <a href="https://youtu.be/OsT4BMQAtjI" target="_blank" rel="noreferrer">https://youtu.be/OsT4BMQAtjI</a></p>
-          <p>My animation demo reel: <br/> <a href="https://youtu.be/GpP2TNIqmZA" target="_blank" rel="noreferrer">https://youtu.be/GpP2TNIqmZA</a></p>
+          <p style={{margin: '0 !important'}}>My Animated Introduction video: <br/> <a href="https://youtu.be/OsT4BMQAtjI" target="_blank" rel="noreferrer">https://youtu.be/OsT4BMQAtjI</a></p>
+          <p style={{margin: '0 !important'}}>My animation demo reel: <br/> <a href="https://youtu.be/GpP2TNIqmZA" target="_blank" rel="noreferrer">https://youtu.be/GpP2TNIqmZA</a></p>
         </div>
       </section>
       <section>
         <div className="container">
           <p style={{padding: "25px 0px"}}>soc med accounts</p>
-          <p>Facebook Account: <br/> <a href="https://www.facebook.com/benjiemmarasiganjr/" target="_blank" rel="noreferrer">https://www.facebook.com/benjiemmarasiganjr/</a></p>
-          <p>My Instagram Account <br/> <a href="https://www.instagram.com/benjiemarasiganjr/" target="_blank" rel="noreferrer">https://www.instagram.com/benjiemarasiganjr/</a></p>
+          <p style={{margin: "5px 0px"}}>Facebook Account: <br/> <a href="https://www.facebook.com/benjiemmarasiganjr/" target="_blank" rel="noreferrer">https://www.facebook.com/benjiemmarasiganjr/</a></p>
+          <p style={{margin: "5px 0px"}}>My Instagram Account <br/> <a href="https://www.instagram.com/benjiemarasiganjr/" target="_blank" rel="noreferrer">https://www.instagram.com/benjiemarasiganjr/</a></p>
+          <div 
+            style={{
+              color: "#000",
+              padding: '50px 0px'
+            }}
+          >
+            <Link to="/exhibit/to-differ-digitally/">Return to previous page &gt;</Link>
+          </div>
         </div>
       </section>
     </main>
