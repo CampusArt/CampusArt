@@ -63,10 +63,7 @@ export default function HallOfHeroes() {
           <p>At present, I am teaching courses on Animation Principles, Character Design, 2D Tradigital Animation, and Cut Out Animation.  I’m also into VR animation using Oculus Rift S and Oculus Quill.</p>
           <p style={{margin: '0 !important'}}>My Animated Introduction video: <br/> <a href="https://youtu.be/OsT4BMQAtjI" target="_blank" rel="noreferrer">https://youtu.be/OsT4BMQAtjI</a></p>
           <p style={{margin: '0 !important'}}>My animation demo reel: <br/> <a href="https://youtu.be/GpP2TNIqmZA" target="_blank" rel="noreferrer">https://youtu.be/GpP2TNIqmZA</a></p>
-        </div>
-      </section>
-      <section>
-        <div className="container">
+          
           <p style={{padding: "25px 0px"}}>soc med accounts</p>
           <p style={{margin: "5px 0px"}}>Facebook Account: <br/> <a href="https://www.facebook.com/benjiemmarasiganjr/" target="_blank" rel="noreferrer">https://www.facebook.com/benjiemmarasiganjr/</a></p>
           <p style={{margin: "5px 0px"}}>My Instagram Account <br/> <a href="https://www.instagram.com/benjiemarasiganjr/" target="_blank" rel="noreferrer">https://www.instagram.com/benjiemarasiganjr/</a></p>
