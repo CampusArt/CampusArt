@@ -1,6 +1,10 @@
 // import bg from "../../../assets/images/tdd2bg.jpeg";
+import {useEffect} from "react";
 import {Link } from "react-router-dom"
 export default function ExhibitBrief() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   return (
     <main id="tdd2" className="xbtb">
       <section id="exhibit-brief">

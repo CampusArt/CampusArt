@@ -24,13 +24,17 @@ export default function ManilaLockDown() {
           <h1>ALFSPOT QUARANTINE PROJECT</h1>
           <h4>TJ Aquino</h4>
         </Link>
-        
-        {/* eslint-disable-next-line */}
-        <a href="#" onClick={()=> {return null }}style={{ backgroundImage: `url(${ManilaMania})`}}>
-          <h4>COMING SOON</h4>
+
+        <Link
+          style={{
+            backgroundImage: `url(${ManilaMania})`
+          }}
+          to="/exhibit/taft-and-the-burnham-plan/manila-lockdown/manila-mania"
+        >
           <h1 style={{letterSpacing: '0.7em'}}>MANILA MANIA</h1>
           <h4>Gerome Soriano</h4>
-        </a>
+        </Link>
+        
       </section>
       <section id="exhibits">
         <div className="flex container navBoxes">

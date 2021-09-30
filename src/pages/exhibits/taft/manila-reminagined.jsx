@@ -1,6 +1,7 @@
 import {useHistory} from "react-router-dom";
 import Patchwork from "../../../assets/images/Patchwork.jpg";
 import Multigen from "../../../assets/images/Multigen.jpg"
+import SmallIsBig from "../../../assets/images/SmallIsBig.jpg"
 
 export default function ManilaReimagined() {
 
@@ -22,7 +23,7 @@ export default function ManilaReimagined() {
           <p style={{textAlign: 'right'}}>-Ar Jim Caumeron, Professor, Architectural Design 5</p>
         </div>
       </section>
-      <section id="exhibit">
+      <section id="exhibit" style={{margin: '50px 0px'}}>
         <div className="container navBoxes">
           <div
             style={{
@@ -43,6 +44,19 @@ export default function ManilaReimagined() {
             }}
           >
             <img src={Multigen} alt="Multigenerational City" width="100%" />
+          </div>
+        </div>
+        <div className="container navBoxes">
+          <div
+            style={{
+              flex: '1',
+              maxWidth: '580.03px'
+            }}
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/small-is-big')
+            }}
+          >
+            <img src={SmallIsBig} alt="Patchwork" width="100%" />
           </div>
         </div>
       </section>

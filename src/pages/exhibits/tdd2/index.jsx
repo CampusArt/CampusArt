@@ -10,7 +10,7 @@ export default function TDD2() {
 
   const exhibits = [
     { title: "Hall Of Heroes", status: "published", author: "Benjie Marasigan", link: "hall-of-heroes", bg: "https://i.ibb.co/dMhfws6/Benjie-Marasigan-Thumbnail.jpg" },
-    { title: "Mga 'Di Nakikita Ng Mata", status: "draft", author: "Yolec Homecillo", link: "mga-di-nakikita-ng-mata" },
+    { title: "Mga 'Di Nakikita Ng Mata", status: "published", author: "Yolec Homecillo", link: "mga-di-nakikita-ng-mata", bg: "https://i.ibb.co/WkVybRW/MgaMata.jpg"},
     { title: "Action Series: Frontliner Heroes \n Featuring Voltanna", status: "draft", author: "Volty Garcia/Hannah Sison", link: "front-liner-heroes-featuring-voltanna" },
     { title: "I, Labyrinth", status: "draft", author: "Jag Garcia", link: "i-labyrinth" },
     { title: "Portal", status: "draft", author: "Hannah Sison", link: "portal" },

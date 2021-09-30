@@ -7,7 +7,7 @@ export default function CarouselSlider({data}) {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    arrows: false,
+    arrows: true,
     className: "sliderReact"
   }
   return (

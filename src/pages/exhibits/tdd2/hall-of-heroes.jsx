@@ -25,7 +25,7 @@ export default function HallOfHeroes() {
         />
         <h1 className="title glow">"HALL OF HEROES"</h1>
         <h3 className="author glow">BENJIE MARASIGAN</h3>
-        <p>When the COVID-19 pandemic struck early last year, we were all caught by surprise.  The sudden disruption brought by the lockdowns gave anxieties to all of us. As I was watching the news about the deaths and difficulties faced by the frontline health workers, I felt helpless, frightened, sad, and guilty. Guilty of not being able to help because I cannot get out of the house. I tried to think of ways on how to best contribute to the effort against COVID-19, given the limitation of the situation. What immediately crossed my mind was how I can use my God-given skills to give hope to others, through art, during this time of hopelessness. Because of the community quarantine, the social media became the natural venue to share these artworks, specifically Facebook and Instagram. Since the start of the pandemic up to the present, I tried to document what was happening in our country, through my digital illustration and paintings.</p>
+        <p style={{textAlign: 'center' }}><em>When the COVID-19 pandemic struck early last year, we were all caught by surprise.  The sudden disruption brought by the lockdowns gave anxieties to all of us. As I was watching the news about the deaths and difficulties faced by the frontline health workers, I felt helpless, frightened, sad, and guilty. Guilty of not being able to help because I cannot get out of the house. I tried to think of ways on how to best contribute to the effort against COVID-19, given the limitation of the situation. What immediately crossed my mind was how I can use my God-given skills to give hope to others, through art, during this time of hopelessness. Because of the community quarantine, the social media became the natural venue to share these artworks, specifically Facebook and Instagram. Since the start of the pandemic up to the present, I tried to document what was happening in our country, through my digital illustration and paintings.</em></p>
         <p>The following were the main themes of my digital creations:</p>
       </div>
       <section>
@@ -73,7 +73,7 @@ export default function HallOfHeroes() {
               padding: '50px 0px'
             }}
           >
-            <Link to="/exhibit/to-differ-digitally/">Return to previous page &gt;</Link>
+            <Link to="/exhibit/to-differ-digitally/">RETURN TO PREVIOUS PAGE &gt;</Link>
           </div>
         </div>
       </section>

@@ -26,11 +26,17 @@ import ManilaLockDown from './pages/exhibits/taft/manila-lockdown';
 import ManilaReimagined from './pages/exhibits/taft/manila-reminagined';
 import Patchwork from "./pages/exhibits/taft/Patchwork";
 import MultigenCity from "./pages/exhibits/taft/MultigenCity";
+import SmallIsBig from "./pages/exhibits/taft/smallisbig";
+import ManilaMania from "./pages/exhibits/taft/manila-mania";
 
 // TDD2
 import TDD2 from "./pages/exhibits/tdd2/index";
 import ExhibitBrief from "./pages/exhibits/tdd2/exhibit-brief";
 import HallOfHeroes from "./pages/exhibits/tdd2/hall-of-heroes";
+
+// Farrales
+import Farrales from "./pages/exhibits/farrales";
+import MgaMata from "./pages/exhibits/tdd2/mata";
 
 //eslint-disable-next-line
 function App() {
@@ -61,17 +67,21 @@ function App() {
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-1905" component={Manila1905}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown" component={ManilaLockDown}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown/alfspot-quarantine-project" component={Alfspot}/>
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-lockdown/manila-mania" component={ManilaMania}/>
+
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined" component={ManilaReimagined}/>
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/manila-city-halls-patchwork-city" component={Patchwork} />
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/multi-generational-city" component={MultigenCity} />
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/small-is-big" component={SmallIsBig}/>
 
               {/* TDD2 */}
               <Route exact path="/exhibit/to-differ-digitally" component={TDD2} />
               <Route exact path="/exhibit/to-differ-digitally/exhibit-brief" component={ExhibitBrief} />
               <Route exact path="/exhibit/to-differ-digitally/hall-of-heroes" component={HallOfHeroes} />
+              <Route exact path="/exhibit/to-differ-digitally/mga-di-nakikita-ng-mata" component={MgaMata} />
 
               {/* FARRALES */}
-              {/* <Route exact path="/exhibit/farrales-x-fdm" component={Ferrales}/> */}
+              <Route exact path="/exhibit/farrales-x-fdm" component={Farrales}/>
 
               {/* Not Found */}
               <Route path="/exhibit/*" component={ComingSoon}/>

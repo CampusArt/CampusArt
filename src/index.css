@@ -849,8 +849,8 @@ main#taft.alfspot a {
 #ferrales #title {
   color: #F412EF;
   text-align: center;
-  font-size: clamp(5rem, 50vw, 12rem);
-  line-height: 0.8em;
+  font-size: clamp(1rem, 12vw, 12rem);
+  line-height: 1.2em;
   height: 100%;
   min-height: 100vh;
   display: flex;
@@ -1105,6 +1105,10 @@ main#taft.alfspot a {
 }
 #tdd2.home #acknowledgements p {
   margin: 0;
+}
+#tdd2 .sketchfab-embed-wrapper iframe{
+  height: 600px;
+  width: 100%;
 }
 /* TDD2 exhibit brief */
 #tdd2.xbtb #exhibit-brief{
