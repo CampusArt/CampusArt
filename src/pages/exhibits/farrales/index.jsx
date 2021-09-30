@@ -42,7 +42,7 @@ export default function Ferrales() {
                 data.map((d, i) => {
                   if(d.status === "published") {
                     return (
-                      <a href={`${d.link}`} target="_blank" rel="noreferrer" style={{backgroundImage: `${d.background}` }} className="item published"></a>
+                      <a href={`${d.link}`} target="_blank" rel="noreferrer" style={{backgroundImage: `${d.background}` }} className="item published"> </a>
                     )
                   } else {
                     return (
