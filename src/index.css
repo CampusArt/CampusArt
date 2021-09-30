@@ -886,12 +886,17 @@ main#taft.alfspot a {
 
 #ferrales #grid .item {
   flex: 1 1 25%;
-  background-color: #fff;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 300px;
   width: 300px;
-  margin: 20px
+  margin: 20px;
+  min-width: 320px;
 }
-
+#ferrales #grid .item.published {
+  background-color: #fff;
+}
 /* ReImagined */
 
 #taft.reimagined {
