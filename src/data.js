@@ -14,7 +14,7 @@ export const Banners = [
     status: 'draft',
     url: "to-differ-digitally",
     date: "September 23, 2021",
-    banner: "https://i.ibb.co/LrtVbnf/To-Differ-Digitally.png",
+    banner: "https://i.ibb.co/tLKgphc/TDD-1.png",
     description: "An exhibit of digital art by the New Media faculty of the De La Salle-College of Saint Benilde. Curated by Karen Ocampo-Flores and Gerry Torres.",
   },
   {
@@ -26,22 +26,14 @@ export const Banners = [
     banner: "https://i.ibb.co/NT26WZF/FARRALESBANNER-2.png",
     description: "An Instagram exhibit on the Dean of Philippine Fashion, Ben Farrales and the students of Benilde’s Fashion Design and Merchandising program. Curated by Gerry Torres.",
   },
-  // {
-  //   id: 3,
-  //   title: "FARRALES <br/> X FDM",
-  //   url: "farrales-x-fdm",
-  //   date: "September 21, 2021",
-  //   banner: "https://i.ibb.co/t2wRTGg/Farrales-XFDM.png",
-  //   description: "An Instagram exhibit on the Dean of Philippine Fashion Ben Farrales and the students of Benilde’s Fashion Design and Merchandising program",
-  // },
-  // {
-  //   id: 4,
-  //   title: "FARRALES <br/> X FDM",
-  //   url: "farrales-x-fdm",
-  //   date: "September 21, 2021",
-  //   banner: "https://i.ibb.co/t2wRTGg/Farrales-XFDM.png",
-  //   description: "An Instagram exhibit on the Dean of Philippine Fashion Ben Farrales and the students of Benilde’s Fashion Design and Merchandising program",
-  // },
+  {
+    id: 3,
+    title: "MUSIC X ART",
+    url: "music-x-art",
+    date: "September 21, 2021",
+    banner: "https://i.ibb.co/1QnwQk4/Music-XArt.png",
+    description: 'The Composition 2 finals project of Benilde’s Music Production students under Ms Gian Gianan will be used for three music videos featuring artworks installed at the School of Design and Arts for the "CCP 13 Artists in Benilde" project."',
+  },
 ];
 
 export default Banners;

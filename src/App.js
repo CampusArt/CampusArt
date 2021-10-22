@@ -28,15 +28,20 @@ import Patchwork from "./pages/exhibits/taft/Patchwork";
 import MultigenCity from "./pages/exhibits/taft/MultigenCity";
 import SmallIsBig from "./pages/exhibits/taft/smallisbig";
 import ManilaMania from "./pages/exhibits/taft/manila-mania";
+import ManilaSymbioticCity from "./pages/exhibits/taft/Symbiotic-City"
 
 // TDD2
 import TDD2 from "./pages/exhibits/tdd2/index";
 import ExhibitBrief from "./pages/exhibits/tdd2/exhibit-brief";
 import HallOfHeroes from "./pages/exhibits/tdd2/hall-of-heroes";
+import RedTagged from "./pages/exhibits/tdd2/redtagged"
 
 // Farrales
 import Farrales from "./pages/exhibits/farrales";
 import MgaMata from "./pages/exhibits/tdd2/mata";
+
+// MusicXArt
+import MusicXArt from "./pages/exhibits/musicxart";
 
 //eslint-disable-next-line
 function App() {
@@ -73,15 +78,20 @@ function App() {
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/manila-city-halls-patchwork-city" component={Patchwork} />
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/multi-generational-city" component={MultigenCity} />
               <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/small-is-big" component={SmallIsBig}/>
-
+              <Route exact path="/exhibit/taft-and-the-burnham-plan/manila-reimagined/manilas-symbiotic-city" component={ManilaSymbioticCity}/>
+              
               {/* TDD2 */}
               <Route exact path="/exhibit/to-differ-digitally" component={TDD2} />
               <Route exact path="/exhibit/to-differ-digitally/exhibit-brief" component={ExhibitBrief} />
               <Route exact path="/exhibit/to-differ-digitally/hall-of-heroes" component={HallOfHeroes} />
               <Route exact path="/exhibit/to-differ-digitally/mga-di-nakikita-ng-mata" component={MgaMata} />
+              <Route exact path="/exhibit/to-differ-digitally/red-tagged" component={RedTagged} />
 
               {/* FARRALES */}
               <Route exact path="/exhibit/farrales-x-fdm" component={Farrales}/>
+
+              {/* MUSIC X ART */}
+              <Route exact path="/exhibit/music-x-art" component={MusicXArt}/>
 
               {/* Not Found */}
               <Route path="/exhibit/*" component={ComingSoon}/>

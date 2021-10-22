@@ -2,6 +2,7 @@ import {useHistory} from "react-router-dom";
 import Patchwork from "../../../assets/images/Patchwork.jpg";
 import Multigen from "../../../assets/images/Multigen.jpg"
 import SmallIsBig from "../../../assets/images/SmallIsBig.jpg"
+import SymbioticCity from "../../../assets/images/SymbioticCity.jpg";
 
 export default function ManilaReimagined() {
 
@@ -57,6 +58,16 @@ export default function ManilaReimagined() {
             }}
           >
             <img src={SmallIsBig} alt="Patchwork" width="100%" />
+          </div>
+          <div
+            style={{
+              flex: '1',
+            }}
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/manilas-symbiotic-city')
+            }}
+          >
+            <img src={SymbioticCity} alt="Symbiotic City" width="100%" />
           </div>
         </div>
       </section>

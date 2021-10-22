@@ -11,18 +11,18 @@ export default function TDD2() {
   const exhibits = [
     { title: "Hall Of Heroes", status: "published", author: "Benjie Marasigan", link: "hall-of-heroes", bg: "https://i.ibb.co/dMhfws6/Benjie-Marasigan-Thumbnail.jpg" },
     { title: "Mga 'Di Nakikita Ng Mata", status: "published", author: "Yolec Homecillo", link: "mga-di-nakikita-ng-mata", bg: "https://i.ibb.co/WkVybRW/MgaMata.jpg"},
+    { title: "Red Tagged", status: "published", author: "Jay Javier", link: "red-tagged", bg: "https://i.ibb.co/QQ8D35L/RED-TAGGED.png"},
     { title: "Action Series: Frontliner Heroes \n Featuring Voltanna", status: "draft", author: "Volty Garcia/Hannah Sison", link: "front-liner-heroes-featuring-voltanna" },
     { title: "I, Labyrinth", status: "draft", author: "Jag Garcia", link: "i-labyrinth" },
     { title: "Portal", status: "draft", author: "Hannah Sison", link: "portal" },
     { title: "Double Pandemic", status: "draft", author: "Seymour Sanchez", link: "double-pandemic" },
     { title: "Leading Leni", status: "draft", author: "Seymour Sanchez", link: "leading-leni" },
-    { title: "Sino ba kausap mo?", status: 'draft', author: "Seymour Sanchez/ Katrina Juane / Vanessa Puenta / Erika Garalde / Dino Brucelas", link: "sino-ba-kausap-mo" },
+    { title: "Sino ba kausap mo?", status: 'draft', author: "Seymour Sanchez/ Katrina Juane / Vanessa Puenta / Erika Garalde / Dino Brucelas", link: "sino-ba-kausap-mo", bg: "https://i.ibb.co/KwYq0HT/sino-ba-kausap-mo.png" },
     { title: "After The Exquisite Corpse", status: 'draft', author: "Dino Brucelas", link: "after-the-exquisite-corpse" },
     { title: "Veerus", status: "draft", author: "Teta Tulay", link: "Veerus" },
     { title: "Mary and the Machine", status: "draft", author: "Mito Tubilleja", link: "mary-and-the-machine" },
     { title: "Lynyrd Paras", status: "draft", author: "Penny Angeles Tan", link: "lynyrd-pass" },
     { title: "Just Snap!", status: "draft", author: "Rafael Liao", link: "just-snap" },
-    { title: "Red Tagged", status: "draft", author: "Jay Javier", link: "red-tagged" }
   ]
   return (
     <main id="tdd2" className="home">

@@ -852,7 +852,8 @@ main#taft.alfspot a {
   font-size: clamp(1rem, 12vw, 12rem);
   line-height: 1.2em;
   height: 100%;
-  min-height: 100vh;
+  min-height: 75vh;
+  padding: 100px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -861,42 +862,35 @@ main#taft.alfspot a {
 
 #ferrales #description {
   margin-top: 50px;
-  text-align: center;
+  color: #6C79F9;
+  margin: 50px 0px;
 }
 
-#ferrales #description p:last-child {
-  margin-top: 20px;
+#ferrales #description p {
+  margin: 21px 0px;
+  font-size: 21px;
 }
 
-#ferrales #description {
-  margin-top: 50px;
-  text-align: center;
+#ferrales ._2R-kh {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-gap: 30px;
+}
+#ferrales ._2R-kh div {
+  height: 320px;
+  border: none;
+}
+#ferrales ._2R-kh div a div {
+  display: none;
+}
+#ferrales ._2R-kh img,
+#ferrales ._2R-kh video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center center;
 }
 
-#ferrales #grid {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  /* justify-content: start; */
-  /* align-items: auto; */
-  /* align-content: start */
-}
-
-#ferrales #grid .item {
-  flex: 1 1 25%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 300px;
-  margin: 20px;
-  min-width: 320px;
-}
-#ferrales #grid .item.published {
-  background-color: #fff;
-}
 /* ReImagined */
 
 #taft.reimagined {
@@ -1025,6 +1019,7 @@ main#taft.alfspot a {
   display: flex;
   flex-direction: column;
   color: #fff;
+  background-size: cover;
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -1123,6 +1118,16 @@ main#taft.alfspot a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* MUSIC X ART */
+#musicxart {
+  height: 100%;
+  min-height: 100vh;
+  padding: 100px 0px;
+}
+#musicxart p {
+  margin: 21px 0px;
 }
 
 /* TDD2 TEMPLATE FOR EXHIBITS */
