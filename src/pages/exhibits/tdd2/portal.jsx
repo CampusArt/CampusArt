@@ -53,7 +53,7 @@ export default function Portal() {
               <p>Let us all stay safe and give light to one another during these dark times.</p>
             </div>
           </div>
-          <img src={PortalBanner} style={{width: '100%'}} />
+          <img src={PortalBanner} style={{width: '100%'}} alt="" />
           <p>Hannah Ruth Sison, is a multimedia artist and is in the academe. She took up multimedia Arts in De La Salle - College of St. Benilde, Masters of Arts in communication Major in applied Media Studies at De La Salle University. She is currently taking up her Phd in Media Studies at the University of the Philippines Diliman. Her research interests are all about the virtual, new media, and of course the nexus between media and her love for music, games, art, and more. </p>
           <p>She has been a part-time faculty in Benilde teaching MMA since 2010. She has been working as a freelance multimedia artist since 2007 and working with various brands, events, and companies. Mostly Graphic Design, Photography, and Illustration. At the same time she also does part-time Modelling on the side. Basically, she is a part-timer. But her dream is to do no work, sleep and just play music, make art, and play games. </p>
           <p>You can find her in</p>
