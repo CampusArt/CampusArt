@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import Youtube from "react-youtube";
 import {Link} from "react-router-dom"
 import InstagramFeed from "react-ig-feed";
+import SinoKausapMo from "../../../assets/images/SinoKausapBanner.jpg"
 
 export default function SinoKausap() {
   
@@ -9,21 +9,11 @@ export default function SinoKausap() {
   useEffect(() => {
     window.scrollTo(0,0)
   },[])
-
-  const opts = {
-    height: '840px',
-    width: '100%',
-    playerVars: {
-      autoplay: 1,
-    },
-  };
+  
   return (
     <main id="tdd2" className="template">
       <div className="container">
-        <Youtube
-          videoId="U9UxPwuxCVE"
-          opts={opts}
-        />
+        <img src={SinoKausapMo} alt="" width="100%" />
         <h1 className="title glow">"SINO BA KAUSAP MO?"</h1>
         <h3 className="author glow">MMPUBLI FACULTY</h3>
         <p style={{textAlign: 'center' }}><em>“We start a new word every Tuesday, one member per day per word.”</em></p>

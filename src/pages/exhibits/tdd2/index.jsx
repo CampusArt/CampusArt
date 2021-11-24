@@ -17,7 +17,7 @@ export default function TDD2() {
     { title: "Action Series: Frontliner Heroes \n Featuring Voltanna", status: "published", author: "Volty Garcia/Hannah Sison", bg:"https://i.ibb.co/gvKV7Tw/VOLTY.jpg", link: "front-liner-heroes-featuring-voltanna" },
     { title: "Portal", status: "published", bg: "https://i.ibb.co/2SnC4rK/Portal-Banner.jpg", author: "Hannah Sison", link: "portal" },
     { title: "I, Labyrinth", bg:"https://i.ibb.co/NV67YJw/ILabyrinth-Poster.png", status: "published", author: "Jag Garcia", link: "i-labyrinth" },
-    { title: "Maria Leonor", status: "published", author: "Seymour Sanchez", bg:"https://i.ibb.co/Df42WMy/COMINGSOON7.png", link: "maria-leonor" },
+    { title: "Maria Leonor", status: "published", author: "Seymour Barros Sanchez", bg:"https://i.ibb.co/Df42WMy/COMINGSOON7.png", link: "maria-leonor" },
     { title: "Ang Bangkay Na Marikit Sa Panahon Ng Pandemic", status: 'draft', author: "Dino Brucelas", link: "ang-bangkay-na-marikit-sa-panahon-ng-pandemic" },
     { title: "Veerus", status: "draft", author: "Teta Tulay", link: "Veerus" },
     { title: "Mary and the Machine", status: "draft", author: "Mito Tubilleja", link: "mary-and-the-machine" },
