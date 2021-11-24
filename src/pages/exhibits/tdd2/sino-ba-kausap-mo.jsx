@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import Youtube from "react-youtube";
 import {Link} from "react-router-dom"
+import InstagramFeed from "react-ig-feed";
 
 export default function SinoKausap() {
   
@@ -29,8 +30,13 @@ export default function SinoKausap() {
       </div>
       <section>
         <div className="container">
-          <p>“@SinoBaKausapMo is a group of Multimedia Publishing (MMPUBLI) faculty from De La Salle - College of Saint Benilde, School of Design & Arts, under the Multimedia Arts program. Through this endeavor, the group’s intention is to explore what we are teaching students. @SinoBaKausapMo will be taking on a design challenge that aims to test our creativity in making a play on common words used during the time of the pandemic, while grounded on the learning outcomes from the MMPUBLI course.” - MMPUBLI</p>
-          
+          <p>“@SinoBaKausapMo is a group of Multimedia Publishing (MMPUBLI) faculty from De La Salle - College of Saint Benilde, School of Design &amp; Arts, under the Multimedia Arts program. Through this endeavor, the group’s intention is to explore what we are teaching students. @SinoBaKausapMo will be taking on a design challenge that aims to test our creativity in making a play on common words used during the time of the pandemic, while grounded on the learning outcomes from the MMPUBLI course.” - MMPUBLI</p>
+          <div id="ferrales">
+            <InstagramFeed 
+              token="IGQVJVQWFuVTdTblhzb183bzl3aHp4azYwZATBqNTMzR0FPbldkbjNmZAzBjS1RreDZAvQWlCdXN3ME9zcl9qWEtNQ1F1ZAS1iQk43MkVUOElsYnNtaTRvY2pBYUl2ZA1dfbS02Qy1TbzNzRV9kcVFHeUhmTwZDZD"
+              counter="10"
+            />
+          </div>
           <Link to="/exhibit/to-differ-digitally/">Return to previous page &gt;</Link>
         </div>
       </section>

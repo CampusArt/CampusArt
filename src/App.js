@@ -30,11 +30,6 @@ import SmallIsBig from "./pages/exhibits/taft/smallisbig";
 import ManilaMania from "./pages/exhibits/taft/manila-mania";
 import ManilaSymbioticCity from "./pages/exhibits/taft/Symbiotic-City"
 
-// TDD2
-import TDD2 from "./pages/exhibits/tdd2/index";
-import ExhibitBrief from "./pages/exhibits/tdd2/exhibit-brief";
-import HallOfHeroes from "./pages/exhibits/tdd2/hall-of-heroes";
-import RedTagged from "./pages/exhibits/tdd2/redtagged"
 
 // Farrales
 import Farrales from "./pages/exhibits/farrales";
@@ -42,6 +37,18 @@ import MgaMata from "./pages/exhibits/tdd2/mata";
 
 // MusicXArt
 import MusicXArt from "./pages/exhibits/musicxart";
+
+// TDD2
+import TDD2 from "./pages/exhibits/tdd2/index";
+import ExhibitBrief from "./pages/exhibits/tdd2/exhibit-brief";
+import HallOfHeroes from "./pages/exhibits/tdd2/hall-of-heroes";
+import RedTagged from "./pages/exhibits/tdd2/redtagged"
+import DPDC from "./pages/exhibits/tdd2/double-pandemic-deadly-combination";
+import Leni from "./pages/exhibits/tdd2/maria-leonor";
+import ILabyrinth from "./pages/exhibits/tdd2/i-labyrinth";
+import SinoKausap from "./pages/exhibits/tdd2/sino-ba-kausap-mo";
+import Voltanna from "./pages/exhibits/tdd2/voltanna";
+import Portal from "./pages/exhibits/tdd2/portal";
 
 //eslint-disable-next-line
 function App() {
@@ -86,6 +93,12 @@ function App() {
               <Route exact path="/exhibit/to-differ-digitally/hall-of-heroes" component={HallOfHeroes} />
               <Route exact path="/exhibit/to-differ-digitally/mga-di-nakikita-ng-mata" component={MgaMata} />
               <Route exact path="/exhibit/to-differ-digitally/red-tagged" component={RedTagged} />
+              <Route exact path="/exhibit/to-differ-digitally/double-pandemic-deadly-combination" component={DPDC} />
+              <Route exact path="/exhibit/to-differ-digitally/sino-ba-kausap-mo" component={SinoKausap} />
+              <Route exact path="/exhibit/to-differ-digitally/maria-leonor" component={Leni} />
+              <Route exact path="/exhibit/to-differ-digitally/i-labyrinth" component={ILabyrinth} />
+              <Route exact path="/exhibit/to-differ-digitally/portal" component={Portal} />
+              <Route exact path="/exhibit/to-differ-digitally/front-liner-heroes-featuring-voltanna" component={Voltanna} />
 
               {/* FARRALES */}
               <Route exact path="/exhibit/farrales-x-fdm" component={Farrales}/>

@@ -1,7 +1,7 @@
 import InstagramFeed from "react-ig-feed";
+// import InstagramGallery from "instagram-gallery"
 
 export default function Ferrales() {
-
   return (
     <main id="ferrales" className="home">
       <section id="landing">
@@ -36,7 +36,11 @@ export default function Ferrales() {
               Cristina Escario, Faculty, AB-FDM <br />
             </p>
           </div>
-          <InstagramFeed token="IGQVJVX09Ta0NGS1pnLXByTjlXdDd1dFJraEx1WHp5c3ZAuN3NJSkN0WTlPNEJ5MjZAmWG5tcDdveVpvUl91SG5oc19DVGwyLWRmVnJKUC1yamxsQTduSnladEl3UXdBRVczb3ZA1VWRNZA1pMWlV6Nzd4TwZDZD" />
+          <InstagramFeed token="IGQVJVX09Ta0NGS1pnLXByTjlXdDd1dFJraEx1WHp5c3ZAuN3NJSkN0WTlPNEJ5MjZAmWG5tcDdveVpvUl91SG5oc19DVGwyLWRmVnJKUC1yamxsQTduSnladEl3UXdBRVczb3ZA1VWRNZA1pMWlV6Nzd4TwZDZD" counter="100" />
+          {/* <InstagramGallery accessToken="IGQVJVX09Ta0NGS1pnLXByTjlXdDd1dFJraEx1WHp5c3ZAuN3NJSkN0WTlPNEJ5MjZAmWG5tcDdveVpvUl91SG5oc19DVGwyLWRmVnJKUC1yamxsQTduSnladEl3UXdBRVczb3ZA1VWRNZA1pMWlV6Nzd4TwZDZD" count={24} pagination={true}/> */}
+          <div style={{textAlign: 'center', padding: '24px 0px'}}>
+            <a href="https://instagram.com/farralesxfdm" style={{textDecoration: "none", color: "#fff"}}>Visit the Instagram Page to See More</a>
+          </div>
         </div>
       </section>
     </main>

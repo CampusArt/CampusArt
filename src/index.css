@@ -1129,6 +1129,14 @@ main#taft.alfspot a {
 #musicxart p {
   margin: 21px 0px;
 }
+#musicxart section { margin: 50px 0px; }
+#musicxart section .flex { flex-wrap: wrap; }
+#musicxart section .flex div {
+  padding: 24px;
+  min-width: 568px;
+  width: 100%;
+  flex: 1;
+}
 
 /* TDD2 TEMPLATE FOR EXHIBITS */
 #tdd2.template .author {
@@ -1197,6 +1205,9 @@ main#taft.alfspot a {
 }
 
 /* ======= MEDIA QUERIES ====== */ 
+@media only screen and (max-width: 1080px) {
+  .leni .flex { flex-direction: column; }
+}
 @media only screen and (max-width: 812px) {
   .grid {
     background-size: 25% 100%;
