@@ -36,7 +36,7 @@ export default function Ferrales() {
               Cristina Escario, Faculty, AB-FDM <br />
             </p>
           </div>
-          <InstagramFeed token="IGQVJVX09Ta0NGS1pnLXByTjlXdDd1dFJraEx1WHp5c3ZAuN3NJSkN0WTlPNEJ5MjZAmWG5tcDdveVpvUl91SG5oc19DVGwyLWRmVnJKUC1yamxsQTduSnladEl3UXdBRVczb3ZA1VWRNZA1pMWlV6Nzd4TwZDZD" counter="100" />
+          <InstagramFeed token="IGQVJYTXRLYlF3S29ta3FybTRId1BVYTg1dmtzSTdhLWpxbE5JcUtMLUZAkcjh5S3hkS0NxNUs3Q2VUVjVKUzIzY2RLWGVPVE5oWlFiZAVhfTGhmRmNFdWppenVKbTl4eFF1UllWNGItbzVkMXpYVWY0awZDZD" counter="100" />
           {/* <InstagramGallery accessToken="IGQVJVX09Ta0NGS1pnLXByTjlXdDd1dFJraEx1WHp5c3ZAuN3NJSkN0WTlPNEJ5MjZAmWG5tcDdveVpvUl91SG5oc19DVGwyLWRmVnJKUC1yamxsQTduSnladEl3UXdBRVczb3ZA1VWRNZA1pMWlV6Nzd4TwZDZD" count={24} pagination={true}/> */}
           <div style={{textAlign: 'center', padding: '24px 0px'}}>
             <a href="https://instagram.com/farralesxfdm" style={{textDecoration: "none", color: "#fff"}}>Visit the Instagram Page to See More</a>
