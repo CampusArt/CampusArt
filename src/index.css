@@ -1204,6 +1204,63 @@ main#taft.alfspot a {
   100% {text-shadow: -1px 0 0 blue, 1px 0 0 lime;}
 }
 
+/* KayGandaNgAtingMusika */
+
+#kaygandangatingmusika #landing {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #231f20;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+#kaygandangatingmusika .quote {
+  min-width: 250px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+#kaygandangatingmusika .home h1{
+  text-align: center;
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  font-weight: 400;
+  line-height: 1em;
+  padding: 24px 0px;
+}
+
+#kaygandangatingmusika .home .container {
+  overflow: hidden;
+}
+
+#kaygandangatingmusika #exhibitbrief {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+#kaygandangatingmusika .quote02 {
+  min-width: 250px;
+  margin: 20px;
+  text-align: center;
+  color: #231f20;
+  font-style: italic;
+}
+
+#kaygandangatingmusika .container02 {
+  overflow: hidden;
+}
+
 /* ======= MEDIA QUERIES ====== */ 
 @media only screen and (max-width: 1080px) {
   .leni .flex { flex-direction: column; }

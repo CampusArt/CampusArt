@@ -50,6 +50,9 @@ import SinoKausap from "./pages/exhibits/tdd2/sino-ba-kausap-mo";
 import Voltanna from "./pages/exhibits/tdd2/voltanna";
 import Portal from "./pages/exhibits/tdd2/portal";
 
+// KayGandaNgAtingMusika
+import KayGandaNgAtingMusika from "./pages/exhibits/kaygandangatingmusika/index";
+
 //eslint-disable-next-line
 function App() {
   const location = useLocation();
@@ -106,8 +109,11 @@ function App() {
               {/* MUSIC X ART */}
               <Route exact path="/exhibit/music-x-art" component={MusicXArt}/>
 
+              {/*Kay Ganda Ng Ating Musika*/}
+              <Route exact path="/exhibit/kay-ganda-ng-ating-musika" component={KayGandaNgAtingMusika}/>
+
               {/* Not Found */}
-              <Route path="/exhibit/*" component={ComingSoon}/>
+              <Route path="exhibit/*" component={ComingSoon}/>
               <Route path="/exhibit/to-differ-digitally/coming-soon" component={ComingSoon}/>
               <Route exact component={NotFound} />
             </Switch>
