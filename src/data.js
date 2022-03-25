@@ -31,9 +31,10 @@ export const Banners = [
     title: "MUSIC X ART",
     url: "music-x-art",
     date: "September 21, 2021",
-    banner: "https://i.ibb.co/1QnwQk4/Music-XArt.png",
+    banner: "https://i.ibb.co/VCYsLMr/Music-Videos.jpg",
     description: 'The Composition 2 finals project of Benilde’s Music Production students under Ms Gian Gianan will be used for three music videos featuring artworks installed at the School of Design and Arts for the "CCP 13 Artists in Benilde" project."',
   },
+  /*
   {
     id: 4,
     title: "Kay Ganda Ng Ating Musika",
@@ -42,7 +43,7 @@ export const Banners = [
     date: "September 30, 2021",
     banner: "https://i.ibb.co/NT26WZF/FARRALESBANNER-2.png",
     description: "An Instagram exhibit on the Dean of Philippine Fashion, Ben Farrales and the students of Benilde’s Fashion Design and Merchandising program. Curated by Gerry Torres.",
-  },
+  },*/
 ];
 
 export default Banners;

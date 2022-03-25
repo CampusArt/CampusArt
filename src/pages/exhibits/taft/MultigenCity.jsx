@@ -75,7 +75,6 @@ export default function MultigenCity() {
         <p>Other factors that really challenged us in designing during the lockdown was the fact that Andre and I are quite new to this level as this was our first taste of the studio. Many late nights were spent toiling away and even at times breaking down at  the uncertainty of finishing on time. It was mentally and emotionally challenging. </p>
         <p>With this, we hope to encourage everyone to appreciate our country and the culture that comes  with it. We want to embody a sense of community where we all contribute to a universal benefit of all  whilst not forgetting the many efforts and historically relevant factors that helped us get to where we  are today. Know that the is hope yet for our country to develop and improve, if we all do our part  however small it may be. </p>
         
-        <p><strong style={{fontWeight: '600'}}>Next: Small Is Big by Carague and Timbol</strong></p>
         <div 
           style={{
             color: "#000",

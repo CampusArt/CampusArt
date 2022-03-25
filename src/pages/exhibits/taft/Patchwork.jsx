@@ -82,7 +82,6 @@ export default function Patchwork() {
           <p>The patchwork communities concept is basically the backbone of the project and this is what we want the viewers to see. Besides the video presentation, we want them to see the Walkthrough and see the vistas of the city that were based on Burnham’s imagination and principles for Manila.</p>
           <p>To our fellow Benildeans, we know how difficult it is especially being design students and finding inspiration during the lockdown when you’re stuck at home with the same setting. Studies can be overwhelming, unmotivating, sometimes a burnout. Take a break and rest. Sometimes the best ideas come from a random conversation with your friends or certain readings from a book. Stop letting your career wrap around your head. Life is more than just your personal career, it’s about where you are now because of the people who were there for you throughout your journey.</p>
 
-          <p><strong style={{fontWeight: '600'}}>Next: A Multigenerational City by Abacahin and Buencamino</strong></p>
           <div 
             style={{
               color: "#000",

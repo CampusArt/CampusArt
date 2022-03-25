@@ -64,16 +64,44 @@ export default function ExhibitBrief() {
               <p className="glow" style={{textAlign: 'right'}}>- Benedix Jan Ayes <br/> AB Music Production <br/> SY. 2020 - 2021</p>
             </div>
           </div>
-          
-          <h1 style={{textAlign: "center",fontWeight: "500"}}>COMING SOON</h1>
-          <div className="flex" style={{padding: '21px 0px', margin: '24px 0px', justifyContent: 'center'}}>
-            <div style={{flex: '1', padding: '0px 21px'}}>
-              <YouTube videoId="7DZXWptw4eo" opts={opts2}/>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <YouTube
+            videoId="dSildeHxb5k"
+            opts={opts}
+          />
+          <div className="flex">
+            <div>
+              <p>When I first looked at the photos, it was shocking. I thought, the mural ‘Hindi Totoo’ by Rasel  Trinidad was kind of a drama. But when I looked at the pictures, read the articles, it was different, not only a negative emotion but really a creepy one. Red-blood inspired painting with different monsters and creepy shapes around the stairway. </p>
+              <p>When I also read the article from ‘When in Manila’, Rasel’s inspiration was about Filipino  folklores, filipino culture, traditions, and day to day lives. He even mentioned that he was a fan of Magandang Gabi Bayan of Noli de Castro. Well, I can relate to this since I came from a far far province in the south, the province of Davao del Sur. When I was a kid, I also heard a lot of stories, tikbalang, manananggal, shokoy, tsanak, etc., I was exposed to such stories because it was the story to tell for children not to go out beyond 6pm. I can really reflect and relate to this painting because these monsters do exist and even my mother experienced seeing these one when she was pregnant with me.</p>
+            </div>
+            <div>
+              <p>Musically, I want this mural painting to be accompanied with dark-themed music and even a creepy one. My plan is to go with Filipino-native instrument, Kulintang combined with melodic  percussion instruments, percussion instruments such as Conga, String instruments such as  Violin, Cello and Bass Guitar, Woodwind instruments such as Flute and Bassoon, and a Piano. I  will create A, B, and C Section (initial plan) for this and also create solo sections for flute and violin.</p>
+              <p className="glow" style={{textAlign: 'right'}}>- Dwight Ian Perez <br/> AB Music Production <br/> SY. 2020 - 2021</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <YouTube
+            videoId="2yy1m6-Tm1M"
+            opts={opts}
+          />
+          <div>
+            <div>
+              <p>I added the glass breaking to show feelings one can have when dealing with mental health problems. I wanted to portray how scary it can be when handling them alone. But I also wanted to portray a hopeful and peaceful feeling right after.</p>
+            </div>
+            <div>
+              <p className="glow" style={{textAlign: 'right'}}>- Lord Timothy Jordan Martinez <br/> AB Music Production <br/> SY. 2020 - 2021</p>
             </div>
           </div>
           <Link to="/" style={{textDecoration: "none", color: "#000"}}>RETURN TO HOMEPAGE</Link>
         </div>
       </section>
+
     </main>
   )
 }

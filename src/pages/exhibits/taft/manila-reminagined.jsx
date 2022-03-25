@@ -70,6 +70,28 @@ export default function ManilaReimagined() {
             <img src={SymbioticCity} alt="Symbiotic City" width="100%" />
           </div>
         </div>
+        <div className="container navBoxes">
+          <div
+            style={{
+              flex: '1',
+            }}
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/radial-city')
+            }}
+          >
+            <img src={Patchwork} alt="Patchwork" width="100%" />
+          </div>
+          <div
+            style={{
+              flex: '1',
+            }}
+            onClick={() => {
+              history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/tropical-city')
+            }}
+          >
+            <img src={Multigen} alt="Multigenerational City" width="100%" />
+          </div>
+        </div>
       </section>
       <section id="exhibits">
         <div className="flex container navBoxes">

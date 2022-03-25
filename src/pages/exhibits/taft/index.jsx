@@ -133,6 +133,7 @@ export default function Taft() {
             <h2 style={{fontSize: '18px', fontWeight: '500'}}>Artists</h2>
             <p>Tj Aquino</p>
             <p>Gerome Soriano</p>
+            <p>Bien Alvares</p>
           </div>
         </div>
       </section>
