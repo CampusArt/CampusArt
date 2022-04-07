@@ -3,6 +3,8 @@ import Patchwork from "../../../assets/images/Patchwork.jpg";
 import Multigen from "../../../assets/images/Multigen.jpg"
 import SmallIsBig from "../../../assets/images/SmallIsBig.jpg"
 import SymbioticCity from "../../../assets/images/SymbioticCity.jpg";
+import RadialCity from "../../../assets/images/Radialcity.jpg";
+import TropicalCity from "../../../assets/images/Tropicalcity.jpg";
 
 export default function ManilaReimagined() {
 
@@ -79,7 +81,7 @@ export default function ManilaReimagined() {
               history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/radial-city')
             }}
           >
-            <img src={Patchwork} alt="Patchwork" width="100%" />
+            <img src={RadialCity} alt="Radial City" width="100%" />
           </div>
           <div
             style={{
@@ -89,7 +91,7 @@ export default function ManilaReimagined() {
               history.push('/exhibit/taft-and-the-burnham-plan/manila-reimagined/tropical-city')
             }}
           >
-            <img src={Multigen} alt="Multigenerational City" width="100%" />
+            <img src={TropicalCity} alt="Tropical City" width="100%" />
           </div>
         </div>
       </section>
